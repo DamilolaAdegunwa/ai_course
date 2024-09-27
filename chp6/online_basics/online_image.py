@@ -1,3 +1,5 @@
+# Exercise 3
+
 #import the necessary packages
 import certifi
 from io import BytesIO

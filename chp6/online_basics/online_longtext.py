@@ -1,3 +1,5 @@
+# Exercise 2
+
 from openai import OpenAI
 from apikey import apikey
 import os

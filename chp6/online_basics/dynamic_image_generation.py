@@ -1,3 +1,5 @@
+# Exercise 6 - https://chatgpt.com/c/66f60116-7f44-800c-9d44-f39ed9d91833 - Advanced OpenAI Image Project: "Dynamic Image Generation with User Input and Post-Processing Effects"
+
 import os
 import uuid
 import requests

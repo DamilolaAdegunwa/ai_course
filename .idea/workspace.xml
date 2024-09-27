@@ -5,24 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a07cdc35-3a86-4bdc-b2d2-311c6b2623b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ai_course.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp5/streamlit_index.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/installations/check_torch_gpu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/installations/instructions.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/installations/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/apikey.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/dynamic_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/many_image_iter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/many_images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/online_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/online_longtext.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/online_text.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/dynamic_image_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/dynamic_image_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/many_image_iter.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/many_image_iter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/many_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/many_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/online_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_longtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/online_longtext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/online_text.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +223,11 @@
           <url>file://$PROJECT_DIR$/main.py</url>
           <line>8</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chp6/online_basics/many_images.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
