@@ -16,7 +16,7 @@ Customization: The user can select the number of images they want in their colla
 
 import os
 import requests
-from PIL import Image, ImageDraw
+from PIL import Image
 from io import BytesIO
 import certifi
 from openai import OpenAI

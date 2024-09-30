@@ -16,7 +16,7 @@ Customization: The user can specify how much influence each prompt has on the fi
 
 import os
 import requests
-from PIL import Image, ImageEnhance, ImageChops
+from PIL import Image
 from io import BytesIO
 import certifi
 from openai import OpenAI

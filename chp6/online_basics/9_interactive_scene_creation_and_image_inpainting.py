@@ -4,7 +4,7 @@
 import requests
 import certifi
 from io import BytesIO
-from PIL import Image, ImageDraw, ImageOps, ImageFilter
+from PIL import Image, ImageDraw
 import os
 import uuid
 from openai import OpenAI

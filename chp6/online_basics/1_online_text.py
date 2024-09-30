@@ -8,7 +8,7 @@ os.environ['OPENAI_API_KEY'] = apikey
 OpenAI.api_key = apikey
 
 client = OpenAI()
-prompt = "Which city is the largest in the world by population? also tell me what is the number of people there"
+prompt = "Which city is the largest in the world by landmass? also tell me what is the number of people there"
 
 
 

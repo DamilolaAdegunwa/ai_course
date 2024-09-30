@@ -15,7 +15,7 @@ Python Code:
 
 import os
 import requests
-from PIL import Image, ImageSequence
+from PIL import Image
 from io import BytesIO
 import certifi
 import imageio

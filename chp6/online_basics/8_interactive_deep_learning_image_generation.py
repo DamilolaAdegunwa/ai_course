@@ -1,12 +1,5 @@
 # 8 https://chatgpt.com/c/66f60116-7f44-800c-9d44-f39ed9d91833 - Project: Interactive Deep Learning Image Generation with Super-Resolution Enhancement
 
-import torch
-from torch import nn
-from torchvision import transforms
-from torchvision.models import vgg19
-from PIL import Image
-import numpy as np
-
 #import openai
 import requests
 import certifi

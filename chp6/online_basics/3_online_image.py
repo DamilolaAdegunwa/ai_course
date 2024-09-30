@@ -7,7 +7,7 @@ import requests
 #from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from urllib3 import disable_warnings
 from urllib3.exceptions import InsecureRequestWarning
-from PIL import Image, ImageEnhance, ImageFile
+from PIL import Image, ImageEnhance
 from openai import OpenAI
 from apikey import apikey
 import os

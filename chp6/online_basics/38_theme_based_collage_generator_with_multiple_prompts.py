@@ -6,7 +6,7 @@ Python Code
 """
 import os
 import requests
-from PIL import Image, ImageDraw
+from PIL import Image
 from io import BytesIO
 from openai import OpenAI
 from apikey import apikey  # Your file that stores the API key

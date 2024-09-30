@@ -16,7 +16,7 @@ Customization: The user can select how many stages or phases to represent in the
 
 import os
 import requests
-from PIL import Image, ImageDraw, ImageSequence
+from PIL import Image
 from io import BytesIO
 import certifi
 from openai import OpenAI

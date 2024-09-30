@@ -5,103 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a07cdc35-3a86-4bdc-b2d2-311c6b2623b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/100_dynamic_surrealism_imagining_impossible_worlds.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/10_dynamic_object_replacement_in_images_with_inpainting_and_ai_stylization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/11_ai_driven_style_transfer_and_object_inpainting_with_dynamic_masking.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/12_replace_the_girl_in_the_image_with_two_girls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/13_dynamic_image_collage_generator_using_dalle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/14_ai-powered_image_sequence_animation_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/15_ai-generated_interactive_storyboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/16_thematic_image_collage_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/17_animated_thematic_image_sequence_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/18_multi_prompt_style_fusion_image_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/19_text_to_image_collage_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/20_image_variations_grid_from_a_single_prompt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/21_image_generation_with_dynamic_prompts_and_style_modifiers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/22_generating_multiple_thematic_image_variations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/23_generating_a_storyboard_of_sequential_images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/24_creating_a_fantasy_scene_generator_with_background_elements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/25_creating_a_fantasy_scene_generator_with_background_elements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/26_creating_a_themed_art_gallery_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/27_ai_driven_storybook_illustration_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/28_ai_generated_art_gallery_creator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/29_ai_powered_art_filter_application.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/30_interactive_story_visualization_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/31_custom_art_style_image_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/32_generate_thematic_image_sets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/33_multi_style_image_generation_tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/34_conceptual_image_series_with_custom_variations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/35_content_based_image_retrieval_cbir_using_support_vector_machine_svm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/36_themed_image_grid_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/37_dynamic_image_variations_based_on_descriptive_prompts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/38_theme_based_collage_generator_with_multiple_prompts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/39_dynamic_style_transfer_using_openai_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/40_multi-image_grid_generator_using_openai_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/41_text_to_image_art_variations_with_style_control.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/42_dynamic_image_generation_with_variations_and_theme_customization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/43_image_generation_with_layered_prompts_and_style_transfer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/44_thematic_image_generation_with_dynamic_prompt_composition.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/45_Generative_Art_Based_on_Emotion_and_Artistic_styles.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/46_multi_concept_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/47_thematic_digital_poster_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/48_seasonal_landscapes_with_time_variations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/49_futuristic_cities_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/50_generative_art_based_on_color_theory_and_scene_composition.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/51_dynamic_scene_generation_using_object_placement_and_perspective.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/52_generating_images_based_on_lighting_and_shadow_conditions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/53_generating_seasonal_landscapes_with_weather_conditions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/54_generating_futuristic_cityscapes_with_environmental_effects.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/55_generating_mythical_creatures_in_surreal_environments.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/56_mythical_creatures_based_on_abstract_concepts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/57_generative_landscape_art_based_on_environmental_themes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/58_multi_concept_fusion_in_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/59_advanced_generative_art.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/60_dynamic_prompt_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/61_theme_based_ai_art_collections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/62_interactive_storytelling_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/63_interactive_storytelling_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/64_dynamic_theme_based_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/65_ai_generated_mood_boards.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/66_ai_generated_fantasy_landscapes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/67_procedural_cityscape_generation_based_on_time_of_day.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/68_dynamic_landscape_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/69_advanced_dynamic_scene_composition.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/70_thematic_storyboard_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/71_mythical_creatures_in_surreal_landscapes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/72_architectural_wonders_in_futuristic_cities.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/73_mythical_creatures_in_surreal_environments.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/74_ai_generated_architectural_wonders.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/75_dynamic_weather_driven_landscape_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/76_ai_generated_dreamscapes_with_surrealism.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/77_mythical_creature_fusion_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/78_futuristic_cityscapes_with_sci_fi_elements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/79_mythical_creatures_in_surreal_landscapes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/7_dynamic_prompt_based_artistic_style_transfer_collage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/80_mythical_creature_generations_in_unique_environments.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/81_abstract_art_based_on_soundscapes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/82_dynamic_landscape_transformations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/83_fantasy_creature_creation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/84_ai_generated_surreal_landscapes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/85_dynamic_storyboard_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/86_ai_driven_comic_creator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/87_dynamic_visual_storytelling.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/88_multi_style_thematic_art_generator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/89_dynamic_image_synthesis_multifaceted_descriptors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/8_interactive_deep_learning_image_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/90_futuristic_cityscapes_with_geometrical_forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/91_multi_object_scene_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/92_dreamlike_scenes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/93_mythical_creatures_in_otherworldly_landscapes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/94_procedural_world_generation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/95_futuristic_cityscapes_with_advanced_transportation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/96_sci_fi_alien_worlds_with_advanced_technology.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/97_artistic_reimagining.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/98_multi_concept_image_generation_with_dynamic_prompts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/99_abstract_art_inspired_by_natures_elements.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chp6/online_basics/9_interactive_scene_creation_and_image_inpainting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/1_online_audio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/online_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/14_ai-powered_image_sequence_animation_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/14_ai-powered_image_sequence_animation_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/16_thematic_image_collage_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/16_thematic_image_collage_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/17_animated_thematic_image_sequence_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/17_animated_thematic_image_sequence_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/18_multi_prompt_style_fusion_image_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/18_multi_prompt_style_fusion_image_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/38_theme_based_collage_generator_with_multiple_prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/38_theme_based_collage_generator_with_multiple_prompts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/40_multi-image_grid_generator_using_openai_image_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/40_multi-image_grid_generator_using_openai_image_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/8_interactive_deep_learning_image_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/8_interactive_deep_learning_image_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/9_interactive_scene_creation_and_image_inpainting.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/9_interactive_scene_creation_and_image_inpainting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/apikey.py" beforeDir="false" afterPath="$PROJECT_DIR$/apikey.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/dynamic_image_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/5_dynamic_image_generation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/many_image_iter.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/6_many_image_iter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/many_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/4_many_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/3_online_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_longtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/2_online_longtext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/1_online_text.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +56,7 @@
     "Python.17_animated_thematic_image_sequence_generator.executor": "Run",
     "Python.18_multi_prompt_style_fusion_image_generator.executor": "Run",
     "Python.19_text_to_image_collage_generator.executor": "Run",
+    "Python.1_online_text.executor": "Run",
     "Python.20_image_variations_grid_from_a_single_prompt.executor": "Run",
     "Python.22_generating_multiple_thematic_image_variations.executor": "Run",
     "Python.23_generating_a_storyboard_of_sequential_images.executor": "Run",
@@ -148,6 +69,7 @@
     "Python.check_torch_gpu.executor": "Run",
     "Python.dynamic_image_generation.executor": "Run",
     "Python.many_images.executor": "Run",
+    "Python.online_audio.executor": "Run",
     "Python.online_image.executor": "Run",
     "Python.online_longtext.executor": "Run",
     "Python.online_text.executor": "Run",
@@ -159,12 +81,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\damil\PycharmProjects\ai_course\chp6" />
+      <recent name="C:\Users\damil\PycharmProjects\ai_course" />
       <recent name="C:\Users\damil\PycharmProjects\ai_course\chp6\online_basics" />
       <recent name="C:\Users\damil\PycharmProjects\ai_course\chp6\online_basics\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.35_content_based_image_retrieval_cbir_using_support_vector_machine_svm">
-    <configuration name="22_generating_multiple_thematic_image_variations" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.1_online_audio">
+    <configuration name="1_online_audio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_course" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,11 +97,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_audio" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_basics/22_generating_multiple_thematic_image_variations.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\damil\PycharmProjects\ai_course\chp6\online_audio\1_online_audio.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -186,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="23_generating_a_storyboard_of_sequential_images" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="1_online_text" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_course" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -199,7 +123,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_basics/23_generating_a_storyboard_of_sequential_images.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_basics/1_online_text.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1_online_audio" />
+        <item itemvalue="Python.1_online_text" />
         <item itemvalue="Python.35_content_based_image_retrieval_cbir_using_support_vector_machine_svm" />
         <item itemvalue="Python.25_creating_a_fantasy_scene_generator_with_background_elements" />
         <item itemvalue="Python.24_creating_a_fantasy_scene_generator_with_background_elements" />
-        <item itemvalue="Python.23_generating_a_storyboard_of_sequential_images" />
-        <item itemvalue="Python.22_generating_multiple_thematic_image_variations" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +257,7 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/chp6/online_basics/many_images.py</url>
+          <url>file://$PROJECT_DIR$/chp6/online_basics/4_many_images.py</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
