@@ -5,3 +5,7 @@
 /.vs
 /chp6/online_basics/images
 /chp6/online_basics/generated_images
+/chp6/online_basics/*.gif
+/chp6/online_basics/*.png
+/chp6/online_basics/*.jpg
+/chp6/online_basics/*.jpeg
