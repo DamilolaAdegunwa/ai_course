@@ -7,7 +7,7 @@ import requests
 #from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from urllib3 import disable_warnings
 from urllib3.exceptions import InsecureRequestWarning
-from PIL import Image
+from PIL import Image, ImageEnhance, ImageFile
 from openai import OpenAI
 from apikey import apikey
 import os
@@ -50,5 +50,13 @@ image.show()
 guid = uuid.uuid4()
 
 #this could be considered save as
-image.save(f"images/generated_image_{guid}.png")
+# Create the directory for the images
+output_directory = f"images/{guid}/"
+os.makedirs(output_directory, exist_ok=True)
+filename = f"generated_image_{guid}.png"
+image.save(output_directory+filename)
+
+enhancer = ImageEnhance.Brightness(image)
+img = enhancer.enhance(0.3)
+img.show()
 print('done!!')
