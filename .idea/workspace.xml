@@ -5,23 +5,105 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a07cdc35-3a86-4bdc-b2d2-311c6b2623b9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/chp6/online_audio/1_online_audio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/10_real_time_audio_emotion_detection_conversational_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/11_real_time_multispeaker_emotion_driven_transcription.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/12_audio_transcription_with_sentiment_music_generation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/13_advanced_audio_transcription_emotion_profiling_sound_effects.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/14_real_time_multilingual_translation_with_sentiment_feedback.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/15_real_time_audio_transcription_emotion_audio_manipulation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/16_context_aware_audio_transcription_multilanguage_soundtrack.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/17_dynamic_audio_interaction_with_sentiment_analysis_and_sound_modulation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/18_real_time_conversational_agent_with_multi_tiered_emotional_reactions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/19_advanced_audio_manipulation_voice_cloning_emotion_amplification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/20_audio_scene_understanding_adaptive_sound_design.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/21_real_time_multimodal_audio_text_synchronization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/22_dynamic_multilingual_audio_summarization_and_sentiment_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/23_context_aware_audio_enhancement_with_voice_and_emotion_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/24_real_time_language_translation_emotion_classification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/25_podcast_summarization_topic_extraction_voice_modulation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/26_realtime_conference_transcription_translation_sentiment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/27_advanced_audio_summarization_topic_extraction_emotion.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/28_ai_interactive_webinar_transcript_qna_adaptive_summary.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/29_ai_multimodal_audio_system.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/30_ai_real_time_audio_video_event.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/31_ai_multimodal_podcast_production_platform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/32_ai_collaborative_audio_composer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/33_ai_audio_game_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/34_sr_microphone.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/35_ai_multilingual_audio_assistant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/36_ai_voice_cloning_multispeaker_interaction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/37_ai_personalized_storytelling_audio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/38_ai_multilingual_emotion_narration.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/39_ai_multimodal_audio_interaction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/40_ai-enhanced_audio_storytelling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/41_ai_driven_multilingual_voice_assistant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/42_ai_powered_multimodal_audio_experience.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/43_dynamic_interactive_soundscape_emotional_transition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/44_emotion_driven_interactive_audio_ecosystem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/45_advanced_virtual_assistant_sentiment_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/46_multilanguage_emotion_adaptive_audio_response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/47_adaptive_multi_speaker_conversation_3d_soundscapes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/48_dynamic_audio_narratives_with_emotion_based_voice_acting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/49_adaptive_audio_narratives_with_multilanguage_support.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/4_audio_emotion_detection_and_content_summarization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/50_dynamic_audio_narratives_with_emotion_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/51_multi_layered_audio_emotion_clustering.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/52_emotion_driven_audio_augmentation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/53_context_aware_audio_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/54_ai_audio_drama_director.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/55_ai_interactive_audio_narratives.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/56_real_time_multi_character_audio_storytelling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/57_ai_powered_interactive_soundscape.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/58_dynamic_speech_driven_audio_manipulation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/59_advanced_interactive_audio_with_emotion_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/5_interactive_audio_chatbot_with_real_time_transcription_emotion_detection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/60_advanced_interactive_voice_assistant_with_emotion_feedback.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/61_dynamic_multilingual_voice_assistant_with_emotion_detection_and_context_awareness.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/62_sound_example.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/63_sound_example2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/64_dynamic_soundscape_for_multi_character_narratives.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/65_interactive_podcast_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/66_adaptive_audio_drama.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/67_audio_language_learning_tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/68_personalized_audio_storyteller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/69_interactive_audiobook_experience.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/6_real_time_audio_multilingual_speech_translation_and_sentiment_response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/70_dynamic_audio_feedback_system.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/71_interactive_storytelling_with_emotion_recognition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/72_immersive_audio_experience_for_guided_meditation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/73_interactive_storytelling_with_dynamic_audio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/74_real_time_emotion_recognition_and_audio_adaptation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/75_voice_driven_storytelling_with_emotion_and_scene_adaptation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/76_multi_modal_voice_interaction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/77_personalized_audio_storytelling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/78_interactive_audio_game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/79_emotion_based_audio_storyteller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/7_contextual_multilingual_audio_analysis_and_ai_conversational_agent.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/80_interactive_audio_game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/81_audio_escape_room.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/82_interactive_audio_adventure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/83_adaptive_audio_meditation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/84_interactive_audio_storyteller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/85_collaborative_audio_podcast_creator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/86_interactive_audio_language_learning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/87_interactive_audio_language_learning_using_simpleaudio.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/88_interactive_voice_activated_storytelling_platform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/89_ai-powered_voice_assistant_for_guided_meditation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/8_emotionally_responsive_multilingual_audio_chatbot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/90_ai_driven_interactive_storytelling_assistant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/91_ai_audio_adventure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/92_adaptive_audio_storytelling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/93_interactive_voice_controlled_meditation_assistant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/94_interactive_narrative_experience.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/95_interactive_audio_based_language_learning_assistant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/96_ai_powered_interactive_audio_based_game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/97_interactive_language_translation_and_audio_summarization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/98_dynamic_audio_driven_language_learning_assistant.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chp6/online_audio/9_real_time_multilingual_speech_summarization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/14_ai-powered_image_sequence_animation_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/14_ai-powered_image_sequence_animation_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/16_thematic_image_collage_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/16_thematic_image_collage_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/17_animated_thematic_image_sequence_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/17_animated_thematic_image_sequence_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/18_multi_prompt_style_fusion_image_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/18_multi_prompt_style_fusion_image_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/38_theme_based_collage_generator_with_multiple_prompts.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/38_theme_based_collage_generator_with_multiple_prompts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/40_multi-image_grid_generator_using_openai_image_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/40_multi-image_grid_generator_using_openai_image_generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/8_interactive_deep_learning_image_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/8_interactive_deep_learning_image_generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/9_interactive_scene_creation_and_image_inpainting.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/9_interactive_scene_creation_and_image_inpainting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/apikey.py" beforeDir="false" afterPath="$PROJECT_DIR$/apikey.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/dynamic_image_generation.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/5_dynamic_image_generation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/many_image_iter.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/6_many_image_iter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/many_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/4_many_images.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/3_online_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_longtext.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/2_online_longtext.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chp6/online_basics/online_text.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_basics/1_online_text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apikey.py" beforeDir="false" afterPath="$PROJECT_DIR$/apikey.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chp6/online_audio/1_online_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/chp6/online_audio/1_online_audio.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +131,7 @@
   "keyToString": {
     "Python.11_ai_driven_style_transfer_and_object_inpainting_with_dynamic_masking.executor": "Run",
     "Python.12_replace_the_girl_in_the_image_with_two_girls.executor": "Run",
+    "Python.13_advanced_audio_transcription_emotion_profiling_sound_effects.executor": "Run",
     "Python.13_dynamic_image_collage_generator_using_dalle.executor": "Run",
     "Python.14_ai-powered_image_sequence_animation_generator.executor": "Run",
     "Python.15_ai-generated_interactive_storyboard.executor": "Run",
@@ -62,7 +145,12 @@
     "Python.23_generating_a_storyboard_of_sequential_images.executor": "Run",
     "Python.24_creating_a_fantasy_scene_generator_with_background_elements.executor": "Run",
     "Python.25_creating_a_fantasy_scene_generator_with_background_elements.executor": "Run",
+    "Python.2_advanced_multilingual_audio_transcription_with_speaker_diarization.executor": "Run",
+    "Python.34_sr_microphone.executor": "Run",
     "Python.35_content_based_image_retrieval_cbir_using_support_vector_machine_svm.executor": "Run",
+    "Python.3_real_time_multilingual_audio_transcription_sentiment_analysis.executor": "Run",
+    "Python.4_audio_emotion_detection_and_content_summarization.executor": "Run",
+    "Python.5_interactive_audio_chatbot_with_real_time_transcription_emotion_detection.executor": "Run",
     "Python.7_dynamic_prompt_based_artistic_style_transfer_collage.executor": "Run",
     "Python.8_interactive_deep_learning_image_generation.executor": "Run",
     "Python.9_interactive_scene_creation_and_image_inpainting.executor": "Run",
@@ -87,8 +175,8 @@
       <recent name="C:\Users\damil\PycharmProjects\ai_course\chp6\online_basics\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.1_online_audio">
-    <configuration name="1_online_audio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.34_sr_microphone">
+    <configuration name="13_advanced_audio_transcription_emotion_profiling_sound_effects" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_course" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,7 +189,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\damil\PycharmProjects\ai_course\chp6\online_audio\1_online_audio.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_audio/13_advanced_audio_transcription_emotion_profiling_sound_effects.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -110,7 +198,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="1_online_text" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="34_sr_microphone" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_course" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,11 +207,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_audio" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_basics/1_online_text.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_audio/34_sr_microphone.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,7 +220,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="24_creating_a_fantasy_scene_generator_with_background_elements" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="3_real_time_multilingual_audio_transcription_sentiment_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_course" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -141,11 +229,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_audio" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_basics/24_creating_a_fantasy_scene_generator_with_background_elements.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_audio/3_real_time_multilingual_audio_transcription_sentiment_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -154,7 +242,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="25_creating_a_fantasy_scene_generator_with_background_elements" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="4_audio_emotion_detection_and_content_summarization" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_course" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,11 +251,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_audio" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_basics/25_creating_a_fantasy_scene_generator_with_background_elements.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_audio/4_audio_emotion_detection_and_content_summarization.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -176,7 +264,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="35_content_based_image_retrieval_cbir_using_support_vector_machine_svm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="5_interactive_audio_chatbot_with_real_time_transcription_emotion_detection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ai_course" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -185,11 +273,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_basics" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/chp6/online_audio" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_basics/35_content_based_image_retrieval_cbir_using_support_vector_machine_svm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/chp6/online_audio/5_interactive_audio_chatbot_with_real_time_transcription_emotion_detection.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -222,11 +310,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.1_online_audio" />
-        <item itemvalue="Python.1_online_text" />
-        <item itemvalue="Python.35_content_based_image_retrieval_cbir_using_support_vector_machine_svm" />
-        <item itemvalue="Python.25_creating_a_fantasy_scene_generator_with_background_elements" />
-        <item itemvalue="Python.24_creating_a_fantasy_scene_generator_with_background_elements" />
+        <item itemvalue="Python.34_sr_microphone" />
+        <item itemvalue="Python.13_advanced_audio_transcription_emotion_profiling_sound_effects" />
+        <item itemvalue="Python.5_interactive_audio_chatbot_with_real_time_transcription_emotion_detection" />
+        <item itemvalue="Python.4_audio_emotion_detection_and_content_summarization" />
+        <item itemvalue="Python.3_real_time_multilingual_audio_transcription_sentiment_analysis" />
       </list>
     </recent_temporary>
   </component>
@@ -260,6 +348,11 @@
           <url>file://$PROJECT_DIR$/chp6/online_basics/4_many_images.py</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/chp6/online_audio/1_online_audio.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

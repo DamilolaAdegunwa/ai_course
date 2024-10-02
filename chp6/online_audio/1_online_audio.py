@@ -1,7 +1,7 @@
-# Exercise 1
+# Exercise 1 - https://chatgpt.com/c/66fa9dcf-8df4-800c-a2ce-5b4b40c5d532
 
 from openai import OpenAI
-from apikey import apikey
+from apikey import apikey, filepath
 import os
 
 os.environ['OPENAI_API_KEY'] = apikey
