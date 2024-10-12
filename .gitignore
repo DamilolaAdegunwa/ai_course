@@ -1,0 +1,22 @@
+﻿#################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio. #
+#################################################################################
+
+/.vs
+/chp6/online_basics/images
+/chp6/online_basics/generated_images
+/chp6/online_basics/*.gif
+/chp6/online_basics/*.png
+/chp6/online_basics/*.jpg
+/chp6/online_basics/*.jpeg
+/chp6/online_basics/art_styles
+/chp6/online_basics/art_styles_images
+/resources
+/resources/Erwin Smith's Words __ My Soldiers.mp4
+/c7/images
+/.idea
+/apikey.py
+/__pycache__/apikey.cpython-312.pyc
+/chp6/online_basics/__pycache__/apikey.cpython-312.pyc
+/chp6/online_basics/__pycache__/api_key.cpython-312.pyc
+/chp6/online_basics/117_ai_travel_itinerary_visualizer_and_planner/__pycache__/apikey.cpython-312.pyc
