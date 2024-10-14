@@ -1,14 +1,19 @@
 import os
 from io import BytesIO
 
+import certifi
 import requests
 import streamlit as st
 from PIL import Image
 from openai import OpenAI
-from .. import apikey
-
+# from .. import apikey
 # from apikey import apikey
+import sys
+# Add the parent directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+# Now you can import core.py
+from apikey import apikey
 
 ############################################
 # OpenAI API setup
@@ -47,7 +52,7 @@ def generate_image_openai(client, prompt, model="dall-e-3", size="1024x1024", n=
         n=n,
     )
     image_url = response.data[0].url
-    image = requests.get(image_url)
+    image = requests.get(image_url, verify=certifi.where())
     image = Image.open(BytesIO(image.content))
     return image
 
@@ -103,13 +108,13 @@ def main():
     #
     #
     # ##### Text generation ####
-    st.title("Text Generation using OpenAI API")
-    prompt = st.text_input("Enter your prompt", value="Write an essay on computer vision")
-    text_area_placeholder = st.empty()
-    if st.button("Generate Text"):
-        result = generate_text_openai_streamlit(client, prompt, text_area_placeholder, html=True
-                                                )
-        print(f"result_string: {result}")
+    # st.title("Text Generation using OpenAI API")
+    # prompt = st.text_input("Enter your prompt", value="Write an essay on computer vision")
+    # text_area_placeholder = st.empty()
+    # if st.button("Generate Text"):
+    #     result = generate_text_openai_streamlit(client, prompt, text_area_placeholder, html=True
+    #                                             )
+    #     print(f"result_string: {result}")
     #
 
     # #### Image Generation ####
@@ -121,15 +126,15 @@ def main():
     #         st.image(image)
 
     # ####### AUDIO TRANSCRIPTION #######
-    # st.title("Audio Transcription using OpenAI API")
-    # audio_file = st.file_uploader("Choose an audio file...", type=["mp3", "wav"])
-    #
-    # if audio_file:
-    #     if st.button("Transcribe"):
-    #         st.audio(audio_file, format='audio/wav')
-    #         with st.spinner('Transcribing audio...'):
-    #             result = generate_text_from_audio_openai(client, audio_file)
-    #             st.write(result)
+    st.title("Audio Transcription using OpenAI API")
+    audio_file = st.file_uploader("Choose an audio file...", type=["mp3", "wav", "mp4"])
+
+    if audio_file:
+        if st.button("Transcribe"):
+            st.audio(audio_file, format='audio/wav')
+            with st.spinner('Transcribing audio...'):
+                result = generate_text_from_audio_openai(client, audio_file)
+                st.write(result)
 
 
 if __name__ == '__main__':
