@@ -1,0 +1,217 @@
+﻿#################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio. #
+#################################################################################
+
+/.vs
+/chp6/online_basics/images
+/chp6/online_basics/generated_images
+/chp6/online_basics/*.gif
+/chp6/online_basics/*.png
+/chp6/online_basics/*.jpg
+/chp6/online_basics/*.jpeg
+/chp6/online_basics/art_styles
+/chp6/online_basics/art_styles_images
+/resources
+/resources/Erwin Smith's Words __ My Soldiers.mp4
+/c7/images
+/.idea
+/apikey.py
+/__pycache__/apikey.cpython-312.pyc
+/chp6/online_basics/__pycache__/apikey.cpython-312.pyc
+/chp6/online_basics/__pycache__/api_key.cpython-312.pyc
+/chp6/online_basics/117_ai_travel_itinerary_visualizer_and_planner/__pycache__/apikey.cpython-312.pyc
+/models
+/exponential_graph.png
+/autogen_projects/config.json
+/.venv
+/__pycache__
+/pandas_projects/750000_employee_dataset.xlsx
+/autogen_projects/.cache
+/autogen_projects/autogen/.cache
+/images
+/offline_projects/__pycache__
+/openai_images_projects/117_ai_travel_itinerary_visualizer_and_planner/__pycache__
+/openai_images_projects/art_styles
+/openai_images_projects/art_styles_images
+/openai_images_projects/generated_images
+/openai_images_projects/images
+/openai_images_projects/__pycache__
+/openai_images_projects/chroma.log
+/openai_images_projects/city_animation.gif
+/openai_images_projects/collage.png
+/openai_images_projects/composite_image.png
+/openai_images_projects/exponential_graph.png
+/openai_images_projects/farmland_animation.gif
+/openai_images_projects/image_variations_collage.png
+/openai_images_projects/impressionism_style.png
+/openai_images_projects/result_with_two_girls.png
+/openai_images_projects/storyboard_image.png
+/openai_images_projects/surrealist_style.png
+/openai_images_projects/temp_mask.png
+/openai_images_projects/temp_original.png
+/openai_images_projects/themed_image_collage.png
+/project_ideas/data
+/transformers_projects/images
+/tutorials/pandas/employee_dataset.xlsx
+/tutorials/pandas/expanded_employee_dataset.xlsx
+/autogen_projects/.cache/41/cache.db
+/autogen_projects/.cache/42/cache.db
+/autogen_projects/.cache/42/cache.db-shm
+/autogen_projects/.cache/42/cache.db-wal
+/autogen_projects/autogen/.cache/41/cache.db
+/autogen_projects/autogen/.cache/42/cache.db
+/images/things.png
+/numpy_projects/data.bin
+/numpy_projects/data.txt
+/offline_projects/__pycache__/pyramid_dit.cpython-312.pyc
+/openai_images_projects/117_ai_travel_itinerary_visualizer_and_planner/__pycache__/apikey.cpython-312.pyc
+/openai_images_projects/art_styles/abstract_expressionism.png
+/openai_images_projects/art_styles/art_deco.png
+/openai_images_projects/art_styles/art_nouveau.png
+/openai_images_projects/art_styles/baroque.png
+/openai_images_projects/art_styles/bauhaus.png
+/openai_images_projects/art_styles/conceptual_art.png
+/openai_images_projects/art_styles/constructivism.png
+/openai_images_projects/art_styles/cubist.png
+/openai_images_projects/art_styles/dadaism.png
+/openai_images_projects/art_styles/de_stijl.png
+/openai_images_projects/art_styles/expressionism.png
+/openai_images_projects/art_styles/fauvism.png
+/openai_images_projects/art_styles/futurism.png
+/openai_images_projects/art_styles/hyperrealism.png
+/openai_images_projects/art_styles/impressionist.png
+/openai_images_projects/art_styles/lyrical_abstraction.png
+/openai_images_projects/art_styles/minimalism.png
+/openai_images_projects/art_styles/naïve_art.png
+/openai_images_projects/art_styles/neo-expressionism.png
+/openai_images_projects/art_styles/neoclassicism.png
+/openai_images_projects/art_styles/op_art.png
+/openai_images_projects/art_styles/photorealism.png
+/openai_images_projects/art_styles/pop_art.png
+/openai_images_projects/art_styles/post-impressionism.png
+/openai_images_projects/art_styles/precisionism.png
+/openai_images_projects/art_styles/realism.png
+/openai_images_projects/art_styles/renaissance.png
+/openai_images_projects/art_styles/rococo.png
+/openai_images_projects/art_styles/romanticism.png
+/openai_images_projects/art_styles/street_art.png
+/openai_images_projects/art_styles/suprematism.png
+/openai_images_projects/art_styles/surrealist.png
+/openai_images_projects/art_styles/symbolism.png
+/openai_images_projects/art_styles/tachisme.png
+/openai_images_projects/art_styles/vorticism.png
+/openai_images_projects/art_styles/web.config
+/openai_images_projects/art_styles_images/abstract expressionism.webp
+/openai_images_projects/art_styles_images/baroque.webp
+/openai_images_projects/art_styles_images/cubist.webp
+/openai_images_projects/art_styles_images/futurism.webp
+/openai_images_projects/art_styles_images/impressionist.webp
+/openai_images_projects/art_styles_images/minimalism.webp
+/openai_images_projects/art_styles_images/pop art.webp
+/openai_images_projects/art_styles_images/realism.webp
+/openai_images_projects/art_styles_images/surrealist.webp
+/openai_images_projects/__pycache__/apikey.cpython-312.pyc
+/openai_images_projects/__pycache__/api_key.cpython-312.pyc
+/openai_images_projects/images/blurred_castle_image.jpg
+/openai_images_projects/images/e7b73ede-d458-4ec7-a632-35a00765b057/generated_image_e7b73ede-d458-4ec7-a632-35a00765b057.png
+/openai_images_projects/images/e7b73ede-d458-4ec7-a632-35a00765b057/generated_image_fit_e7b73ede-d458-4ec7-a632-35a00765b057.png
+/openai_images_projects/images/e7b73ede-d458-4ec7-a632-35a00765b057/generated_image_grayscale_e7b73ede-d458-4ec7-a632-35a00765b057.png
+/openai_images_projects/images/e7b73ede-d458-4ec7-a632-35a00765b057/generated_image_resized_e7b73ede-d458-4ec7-a632-35a00765b057.png
+/openai_images_projects/images/e7b73ede-d458-4ec7-a632-35a00765b057/generated_image_watermarked_e7b73ede-d458-4ec7-a632-35a00765b057.png
+/openai_images_projects/images/generated_image_2ae7a802-17ba-433a-9fc2-680b84e73a5b.png
+/openai_images_projects/images/super_res_castle_image.jpg
+/openai_images_projects/images/e5205f30-6a79-41f2-91d6-2e6777f845a2/Baroque_enhanced_df16c9a7-6e62-4aa5-b3a8-ed733cca5832.png
+/openai_images_projects/images/e5205f30-6a79-41f2-91d6-2e6777f845a2/Baroque_original_df16c9a7-6e62-4aa5-b3a8-ed733cca5832.png
+/openai_images_projects/images/dd43fc16-547a-4c1d-a67e-4b1570b05aae/artistic_collage.png
+/openai_images_projects/images/dd43fc16-547a-4c1d-a67e-4b1570b05aae/Da Vinci_2a0d9df5-43d2-4b24-ad32-2c56c169efe1.png
+/openai_images_projects/images/dd43fc16-547a-4c1d-a67e-4b1570b05aae/Da Vinci_80bd0a55-c647-425d-8082-2ce9487dac66.png
+/openai_images_projects/images/dd43fc16-547a-4c1d-a67e-4b1570b05aae/Dali_ec73ac0f-1edb-409e-96b2-3ba79562cf87.png
+/openai_images_projects/images/dd43fc16-547a-4c1d-a67e-4b1570b05aae/Dali_f64bf171-742c-4502-b598-f9dc6adfcd2d.png
+/openai_images_projects/images/da643770-03d5-4abb-9931-97893c492621/final_image_Cubist_7fc6d5ca-320f-45ba-8c26-a14a07e033f3.png
+/openai_images_projects/images/c49d16a1-9030-425d-bb9d-57ce3db37bbe/generated_image_c49d16a1-9030-425d-bb9d-57ce3db37bbe.png
+/openai_images_projects/images/b36bd7bd-0ef7-445a-b417-14ca11edabca/Baroque_enhanced_ccee56d7-f8a0-443e-aa89-68fd2d53d8f2.png
+/openai_images_projects/images/b36bd7bd-0ef7-445a-b417-14ca11edabca/Baroque_original_ccee56d7-f8a0-443e-aa89-68fd2d53d8f2.png
+/openai_images_projects/images/b36bd7bd-0ef7-445a-b417-14ca11edabca/Renaissance_original_122d277d-f600-4827-8183-eb1157a02ca9.png
+/openai_images_projects/images/a6750d8d-1276-4dd5-854b-dd31a722b776/Cubist_original_983b1841-720d-45ed-98e6-7a3070ae5110.png
+/openai_images_projects/images/a1d20e5b-7ec3-4c67-9f89-499901f72130/Renaissance_original_c71bb595-d785-4472-af35-2ab49d049830.png
+/openai_images_projects/images/9836afa4-fba0-4dea-b332-7eda5ebbd907/final_image_Watercolor_c7735c12-8a2d-4694-9d2a-a2321b7c8696.png
+/openai_images_projects/images/95874343-dbd1-4aed-89d3-1a64c05a1414/artistic_collage.png
+/openai_images_projects/images/95874343-dbd1-4aed-89d3-1a64c05a1414/Da Vinci_583d63e5-a02d-48aa-8c7f-fc1f195ecd30.png
+/openai_images_projects/images/95874343-dbd1-4aed-89d3-1a64c05a1414/Da Vinci_840282fd-f50b-48db-96d0-883901be5d5b.png
+/openai_images_projects/images/95874343-dbd1-4aed-89d3-1a64c05a1414/Monet_9f6462e5-ba6d-4cb3-9212-db203e9d330a.png
+/openai_images_projects/images/95874343-dbd1-4aed-89d3-1a64c05a1414/Van Gogh_0a6d4e1b-8a34-491b-81b4-62ae43df1d25.png
+/openai_images_projects/images/86a19e5c-8ffa-4cd4-8e76-0a3fd040a2fa/generated_image_86a19e5c-8ffa-4cd4-8e76-0a3fd040a2fa.png
+/openai_images_projects/images/7a03a434-947a-4eb3-8a59-62ba7f880da0/Surrealist_original_ba4156e5-7180-4ced-811f-bafc236eee02.png
+/openai_images_projects/images/6b3ec631-82b6-4192-a616-b3c001a07827/generated_image_6b3ec631-82b6-4192-a616-b3c001a07827.png
+/openai_images_projects/images/46393c83-f1f2-4fb5-be4d-ff9c57498f22/Pop Art_original_7ac77dca-698c-45ad-be49-b732a8e4c97f.png
+/openai_images_projects/images/3f58f58a-6700-41bf-b96f-cd19142375d4/Impressionist_original_af3622a9-9232-4ca2-92c8-e7b1caf75336.png
+/openai_images_projects/images/307b8611-c36d-48c7-a486-bf25ad8c069e/Cubist_enhanced_d341f073-3792-4c9e-abb1-d5e3d77803d8.png
+/openai_images_projects/images/307b8611-c36d-48c7-a486-bf25ad8c069e/Impressionist_enhanced_d94da249-441c-4925-90d2-f264c4f233ce.png
+/openai_images_projects/images/307b8611-c36d-48c7-a486-bf25ad8c069e/Pop Art_enhanced_92bdec76-f056-4ee3-9cf2-c4e6a3e10a0b.png
+/openai_images_projects/images/307b8611-c36d-48c7-a486-bf25ad8c069e/Surrealist_enhanced_b143002a-26ad-4c4f-814f-432137095378.png
+/openai_images_projects/images/2df350b5-d5a7-4abf-8037-af0337ab6b17/Constructivism_original_6dfce767-9638-4c9e-b6c7-31a0f8d059e9.png
+/openai_images_projects/images/2df350b5-d5a7-4abf-8037-af0337ab6b17/Minimalism_enhanced_ea18c14e-7a13-4a0f-9da9-331af7ee1fb2.png
+/openai_images_projects/images/2df350b5-d5a7-4abf-8037-af0337ab6b17/Minimalism_original_ea18c14e-7a13-4a0f-9da9-331af7ee1fb2.png
+/openai_images_projects/images/2df350b5-d5a7-4abf-8037-af0337ab6b17/Post-Impressionism_enhanced_7c4796b8-fd61-4a51-bd12-ba55b36d6dfb.png
+/openai_images_projects/images/2df350b5-d5a7-4abf-8037-af0337ab6b17/Post-Impressionism_original_7c4796b8-fd61-4a51-bd12-ba55b36d6dfb.png
+/openai_images_projects/images/2df350b5-d5a7-4abf-8037-af0337ab6b17/Surrealist_enhanced_11952057-2249-4680-8ed0-65ec04591d9d.png
+/openai_images_projects/images/2df350b5-d5a7-4abf-8037-af0337ab6b17/Surrealist_original_11952057-2249-4680-8ed0-65ec04591d9d.png
+/openai_images_projects/images/2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb/generated_image_2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb.png
+/openai_images_projects/images/2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb/generated_image_grayscale_2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb.png
+/openai_images_projects/images/2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb/generated_image_resized_2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb.png
+/openai_images_projects/images/2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb/generated_image_watermarked_2d98d1f9-cec0-4e1b-b03d-35fb0b3c75fb.png
+/openai_images_projects/generated_images/0198a0c6-2007-4a33-9c10-61bb7cb11c1c/base_scene.png
+/openai_images_projects/generated_images/0198a0c6-2007-4a33-9c10-61bb7cb11c1c/modified_image_079c5199-f964-401f-82f9-87f8f991106c.png
+/openai_images_projects/generated_images/0198a0c6-2007-4a33-9c10-61bb7cb11c1c/modified_image_ec22ef20-3170-4722-9349-252fd1573221.png
+/openai_images_projects/generated_images/53622427-5619-4350-a233-0baf18dbcae5/base_scene.png
+/openai_images_projects/generated_images/53622427-5619-4350-a233-0baf18dbcae5/modified_image_645eb69d-a30e-4dc6-82a6-b2d714909998.png
+/openai_images_projects/generated_images/53622427-5619-4350-a233-0baf18dbcae5/modified_image_6979584a-dec2-4b22-acca-ca481aa9c7a6.png
+/openai_images_projects/generated_images/6da53a1c-f447-41f0-b98c-2f277a1bc81a/base_scene.png
+/openai_images_projects/generated_images/cae948f1-00c5-4dc7-8aa0-965d0b8ff298/base_scene.png
+/openai_images_projects/generated_images/cae948f1-00c5-4dc7-8aa0-965d0b8ff298/modified_image_4299ff34-decd-4fab-a43f-07537e12859a.png
+/openai_images_projects/generated_images/f18d63ee-a841-43c4-9c06-6d2b8e4260ba/base_scene.png
+/openai_images_projects/generated_images/f60642f1-a561-4a0c-9615-b4f909f5e2c0/base_scene.png
+/openai_images_projects/generated_images/fc626e13-6745-4d40-a295-261c13bfd81c/base_scene.png
+/openai_images_projects/images/1bd9a1e6-fd45-4481-a90e-ab10b8272e94/Pop Art_enhanced_222966c3-39fe-4e49-8508-21af960e6e51.png
+/openai_images_projects/images/1bd9a1e6-fd45-4481-a90e-ab10b8272e94/Realism_enhanced_7fbec105-2c4b-45b1-a5bd-c317a960a363.png
+/openai_images_projects/images/1bd9a1e6-fd45-4481-a90e-ab10b8272e94/Surrealist_enhanced_4bda7626-5705-43fb-856f-f6569933488c.png
+/openai_images_projects/images/1bd9a1e6-fd45-4481-a90e-ab10b8272e94/Surrealist_enhanced_f03aa8e6-fafb-4a86-a570-e0e400d42de5.png
+/openai_images_projects/images/201375c3-4d12-4794-84d0-e9bda6ee2c4d/Botticelli_89d4314f-c6d7-4559-b606-c914f1b7e3dd.png
+/openai_images_projects/images/201375c3-4d12-4794-84d0-e9bda6ee2c4d/Johannes Vermeer_a6241b68-1dd8-4d86-8fe6-8b66a46597a0.png
+/openai_images_projects/images/201375c3-4d12-4794-84d0-e9bda6ee2c4d/Max Ernst_d40da1d7-4c62-4f96-b43e-122a0e350f2b.png
+/openai_images_projects/images/201375c3-4d12-4794-84d0-e9bda6ee2c4d/pablo picasso_dc402fb2-678a-4321-ac97-204c2704b235.png
+/openai_images_projects/images/201375c3-4d12-4794-84d0-e9bda6ee2c4d/Paul Cézanne_dcba2170-36d5-44fe-9a61-89a25e288c31.png
+/openai_images_projects/images/201375c3-4d12-4794-84d0-e9bda6ee2c4d/Salvador Dalí_12f169a1-367d-4393-8eeb-82719b3a8743.png
+/openai_images_projects/images/202fe177-2358-48e8-8b97-2132b28995cb/Pop Art_enhanced_6fd55ccb-3dd5-4d5a-9625-e733b93b8e8b.png
+/openai_images_projects/images/202fe177-2358-48e8-8b97-2132b28995cb/Pop Art_original_6fd55ccb-3dd5-4d5a-9625-e733b93b8e8b.png
+/openai_images_projects/images/202fe177-2358-48e8-8b97-2132b28995cb/Romanticism_original_12220f8f-6266-4c4a-998f-5eb023850f91.png
+/openai_images_projects/images/20a6b181-7140-4430-a681-00d3dd8e576c/generated_image_20a6b181-7140-4430-a681-00d3dd8e576c.png
+/openai_images_projects/images/20a6b181-7140-4430-a681-00d3dd8e576c/generated_image_grayscale_20a6b181-7140-4430-a681-00d3dd8e576c.png
+/openai_images_projects/images/20a6b181-7140-4430-a681-00d3dd8e576c/generated_image_resized_20a6b181-7140-4430-a681-00d3dd8e576c.png
+/openai_images_projects/images/24fc6a44-199a-4050-8d2c-4b566a69b75c/Da Vinci_afb7f698-c138-46b7-9a2e-f662f67ac5fe.png
+/openai_images_projects/images/24fc6a44-199a-4050-8d2c-4b566a69b75c/Monet_7323ebfd-858f-45bc-b999-5bbb023044e1.png
+/openai_images_projects/images/24fc6a44-199a-4050-8d2c-4b566a69b75c/Picasso_cd85fdfa-cb5b-43f5-adb8-828f5fd12ace.png
+/openai_images_projects/images/25ad8146-870b-4d5b-95cb-cf7617bbf498/Realism_enhanced_cb65e72d-a4e0-4e4c-984e-2de37909bcbe.png
+/openai_images_projects/images/25ad8146-870b-4d5b-95cb-cf7617bbf498/Realism_enhanced_f958c64b-4234-491e-91d4-30adae8f5a20.png
+/openai_images_projects/images/28cca978-c440-44c0-bbae-323daa5d7850/generated_image_28cca978-c440-44c0-bbae-323daa5d7850.png
+/openai_images_projects/images/28cca978-c440-44c0-bbae-323daa5d7850/generated_image_brightness_28cca978-c440-44c0-bbae-323daa5d7850.png
+/openai_images_projects/chroma.log
+/openai_images_projects/city_animation.gif
+/openai_images_projects/collage.png
+/openai_images_projects/composite_image.png
+/openai_images_projects/exponential_graph.png
+/openai_images_projects/farmland_animation.gif
+/openai_images_projects/image_variations_collage.png
+/openai_images_projects/impressionism_style.png
+/openai_images_projects/result_with_two_girls.png
+/openai_images_projects/storyboard_image.png
+/openai_images_projects/surrealist_style.png
+/openai_images_projects/temp_mask.png
+/openai_images_projects/temp_original.png
+/openai_images_projects/themed_image_collage.png
+/project_ideas/data/cifar-10-python.tar.gz
+/__pycache__/offline_module.cpython-312.pyc
+/__pycache__/online_module.cpython-312.pyc
+/__pycache__/openmacro_profile.cpython-312.pyc
+/__pycache__/resources.cpython-312.pyc
+*.log
