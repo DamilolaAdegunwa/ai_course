@@ -26,6 +26,7 @@ def array_exercises():
     [1. 2. 3.]
     """
 
+
 # asarray()
 def asarray_exercises():
     print("\nExercise 1: Convert a list to an array")
@@ -51,6 +52,7 @@ def asarray_exercises():
     """
     [1, 2, 3]
     """
+
 
 # asanyarray()
 def asanyarray_exercises():
@@ -96,6 +98,7 @@ def ascontiguousarray_exercises():
      [ 3  7 11]]
     """
 
+
 # asmatrix()
 def asmatrix_exercises():
     print("\nExercise 1: Convert an array to a matrix")
@@ -107,6 +110,7 @@ def asmatrix_exercises():
     [3 4]]
     """
 
+
 # astype()
 def astype_exercises():
     print("\nExercise 1: Change dtype of an array")
@@ -116,6 +120,7 @@ def astype_exercises():
     """
     [1 2 3]
     """
+
 
 # copy()
 def copy_exercises():
@@ -127,6 +132,7 @@ def copy_exercises():
     [1 2 3]
     """
 
+
 # frombuffer()
 def frombuffer_exercises():
     print("\nExercise 1: Interpret a buffer as an array")
@@ -136,6 +142,7 @@ def frombuffer_exercises():
     """
     [b'h' b'e' b'l' b'l' b'o' b' ' b'w' b'o' b'r' b'l' b'd']
     """
+
 
 # from_dlpack()
 def from_dlpack_exercises():
@@ -152,6 +159,7 @@ def fromfile_exercises():
     [539767131 857746482 741613612]
     """
 
+
 # fromfunction()
 def fromfunction_exercises():
     print("\nExercise 1: Generate an array with a custom function")
@@ -164,6 +172,7 @@ def fromfunction_exercises():
      [2. 3. 4.]]
     """
 
+
 # fromiter()
 def fromiter_exercises():
     print("\nExercise 1: Create an array from an iterable")
@@ -174,6 +183,7 @@ def fromiter_exercises():
     [0 1 2 3 4]
     """
 
+
 # fromstring()
 def fromstring_exercises():
     print("\nExercise 1: Create an array from a string")
@@ -183,6 +193,7 @@ def fromstring_exercises():
     """
     [1 2 3 4]
     """
+
 
 # loadtxt()
 def loadtxt_exercises():
@@ -195,6 +206,7 @@ def loadtxt_exercises():
      [4. 5. 6.]
      [7. 8. 9.]]
     """
+
 
 # Run all exercises
 if __name__ == "__main__":

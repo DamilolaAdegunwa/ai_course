@@ -40,6 +40,9 @@ print("Exercise 5: eye(4)\n", array5, "\n")
 array6 = np.eye(3, 5, k=1)
 print("Exercise 6: eye(3, 5, k=1)\n", array6, "\n")
 
+array6b = np.eye(3, 5)
+print("Exercise 6b: eye(3, 5)\n", array6b, "\n")
+
 # ===========================
 # 4. identity(n[, dtype, like])
 # ===========================
@@ -58,9 +61,9 @@ print("Exercise 8: identity(3, dtype=np.float64)\n", array8, "\n")
 array9 = np.ones((2, 3))
 print("Exercise 9: ones((2, 3))\n", array9, "\n")
 
-# Exercise 10: Create a 3D array of shape (2, 2, 2) filled with ones, dtype int.
-array10 = np.ones((2, 2, 2), dtype=int)
-print("Exercise 10: ones((2, 2, 2), dtype=int)\n", array10, "\n")
+# Exercise 10: Create a 3D array of shape (4, 2, 2) filled with ones, dtype int.
+array10 = np.ones((4, 2, 2), dtype=int)
+print("Exercise 10: ones((4, 2, 2), dtype=int)\n", array10, "\n")
 
 # ===========================
 # 6. ones_like(a[, dtype, order, subok, shape, ...])
@@ -98,9 +101,9 @@ print("Exercise 16: zeros_like(prototype, dtype=np.float64)\n", array16, "\n")
 # ===========================
 # 9. full(shape, fill_value[, dtype, order, ...])
 # ===========================
-# Exercise 17: Create a 3x3 array filled with the value 7.
-array17 = np.full((3, 3), 7)
-print("Exercise 17: full((3, 3), 7)\n", array17, "\n")
+# Exercise 17: Create a 2x3x3 array filled with the value 7.
+array17 = np.full((2, 3, 3), 7)
+print("Exercise 17: full((2, 3, 3), 7)\n", array17, "\n")
 
 # Exercise 18: Create a 2x4 array filled with the value -5, dtype float.
 array18 = np.full((2, 4), -5, dtype=float)

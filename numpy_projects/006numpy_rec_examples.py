@@ -18,6 +18,7 @@ def example_1b():
     print(weather.temperature.mean())  # Average temperature
     # Output: 25.566666
 
+
 def example_1c():
     """Create a record array for a product catalog."""
     data = [('Laptop', 999.99, 25), ('Smartphone', 699.99, 50), ('Tablet', 499.99, 30)]
@@ -46,6 +47,7 @@ def example_2a():
     # Output:
     # rec.array([('John', 85, 72), ('Alice', 92, 88), ('Bob', 78, 65)],
     #           dtype=[('name', '<U5'), ('math', '<i8'), ('science', '<i8')])
+
 
 def example_2b():
     """Construct data for employee details."""

@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.ndimage import gaussian_filter
 
+
 class ImageProcessor:
     @staticmethod
     def apply_filter(image, filter_matrix):
@@ -62,6 +63,7 @@ class ImageProcessor:
         """
         return np.flip(image, axis=axis)
 
+
 # Example Filters
 GAUSSIAN_KERNEL = gaussian_filter(np.eye(3), sigma=1)
 EDGE_DETECTION_KERNEL = np.array([[-1, -1, -1], [-1, 8, -1], [-1, -1, -1]])
@@ -121,7 +123,7 @@ By leveraging NumPy, this project avoids reliance on dedicated image libraries, 
 Python Code
 """
 
-#Example Inputs and Expected Outputs
+# Example Inputs and Expected Outputs
 """
 Example 1: Apply a Filter
 Input:

@@ -215,3 +215,6 @@
 /__pycache__/openmacro_profile.cpython-312.pyc
 /__pycache__/resources.cpython-312.pyc
 *.log
+/ml_projects/.ipynb_checkpoints
+/ml_projects/elliptic_bitcoin_dataset
+/ml_projects/old_elliptic_bitcoin_dataset

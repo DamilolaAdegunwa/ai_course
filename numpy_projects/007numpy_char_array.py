@@ -1,5 +1,6 @@
 import numpy as np
 
+
 # 1a. Creating a character array for a list of names and standardizing their case
 def example_1a():
     names = ["Alice", "BOB", "Charlie", "diana"]
@@ -7,6 +8,7 @@ def example_1a():
     standardized = char_array.capitalize()  # Capitalize all names
     print("Standardized Names:", standardized)
     # Output: ['Alice', 'Bob', 'Charlie', 'Diana']
+
 
 # 1b. Combining first and last names in a character array
 def example_1b():
@@ -16,12 +18,14 @@ def example_1b():
     print("Full Names:", full_names)
     # Output: ['John Doe', 'Jane Smith', 'Jim Brown', 'Jill Taylor']
 
+
 # 1c. Creating repeated patterns in a character array
 def example_1c():
     pattern = np.char.array(["Hi", "Bye"])
     repeated = np.char.multiply(pattern, 3)
     print("Repeated Patterns:", repeated)
     # Output: ['HiHiHi', 'ByeByeBye']
+
 
 # 1d. Removing prefixes from strings in a character array
 def example_1d():
@@ -30,6 +34,7 @@ def example_1d():
     print("Cleaned Emails:", cleaned_emails)
     # Output: ['john@example.com', 'jane@example.com']
 
+
 # 2a. Converting a Python list of strings to a character array
 def example_2a():
     list_data = ["alpha", "beta", "gamma"]
@@ -37,12 +42,14 @@ def example_2a():
     print("Character Array:", char_array)
     # Output: ['alpha' 'beta' 'gamma']
 
+
 # 2b. Converting a NumPy array of mixed data to a string representation
 def example_2b():
     numeric_array = np.array([1, 2, 3, 4])
     string_array = np.char.asarray(numeric_array.astype(str))
     print("String Representation:", string_array)
     # Output: ['1' '2' '3' '4']
+
 
 # 2c. Using asarray for a uniform character array
 def example_2c():
@@ -52,6 +59,7 @@ def example_2c():
     # Output: [['one' 'two']
     #          ['three' 'four']]
 
+
 # 2d. Converting integers to padded strings
 def example_2d():
     numbers = np.array([1, 20, 300])
@@ -59,11 +67,13 @@ def example_2d():
     print("Padded Strings:", padded)
     # Output: ['0001', '0020', '0300']
 
+
 # 3a. Generate an arithmetic sequence
 def example_3a():
     sequence = np.arange(0, 20, 5)
     print("Arithmetic Sequence:", sequence)
     # Output: [0 5 10 15]
+
 
 # 3b. Generate a grid of points for a 2D plane
 def example_3b():
@@ -74,11 +84,13 @@ def example_3b():
     print("2D Grid (Y):", grid[1])
     # Output: A 2D grid with X and Y coordinates from -5 to 5.
 
+
 # 3c. Create a time array for evenly spaced intervals in a simulation
 def example_3c():
     time_points = np.arange(0, 10, 0.1)
     print("Time Points:", time_points)
     # Output: [0. 0.1 0.2 ... 9.8 9.9]
+
 
 # 3d. Generate indices for slicing a data array
 def example_3d():
@@ -86,6 +98,7 @@ def example_3d():
     indices = np.arange(0, 100, 10)
     print("Data:", data[indices])
     # Output: Every 10th element from the data array.
+
 
 # Run all examples
 example_1a()

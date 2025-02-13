@@ -11,7 +11,7 @@ df: DataFrame = pd.read_excel(file_path)
 # 1. Analyze average performance scores across departments
 def department_performance_analysis(df: DataFrame):
     """
-    This method analyze average performance scores across departments
+    This method help you find out the average performance scores across departments
     :param df:
     :return:
     """
@@ -61,11 +61,13 @@ def hiring_trend_analysis(df: DataFrame):
     plt.grid(True)
     plt.show()
 
+    return hiring_trend
+
 
 # 4. Analyze the average salary by age group
 def average_salary_by_age_group(df):
-    bins = [20, 30, 40, 50, 60]
-    labels = ['20-29', '30-39', '40-49', '50-59']
+    bins = [20, 30, 40, 50, 60]  # pins and...
+    labels = ['20-29', '30-39', '40-49', '50-59']  # space between the pins (if there are n pins, labels = n - 1)
     df['Age_Group'] = pd.cut(df['Age'], bins=bins, labels=labels, right=False)
     age_salary_summary = (
         df.groupby('Age_Group',  observed=False)['Salary']
@@ -105,6 +107,7 @@ def salary_distribution_by_age(df):
     plt.xlabel("Age")
     plt.ylabel("Salary")
     plt.show()
+    return df
 
 
 # 7. Find the department with the longest average tenure of employees
@@ -134,20 +137,29 @@ def performance_salary_correlation(df):
     plt.xlabel("Performance Score")
     plt.ylabel("Salary")
     plt.show()
+    return correlation
 
 
 # 9. Visualize department size as a percentage of total employees
 def department_size_visualization(df):
     department_counts = df['Department'].value_counts(normalize=True) * 100
+    # department_counts_float = (df['Department'].size()).astype(float)
+    # department_counts = (department_counts_float / department_counts_float.sum()) * 100
     department_counts.plot(kind='pie', autopct='%1.1f%%', figsize=(8, 8))
     plt.title("Department Size as Percentage of Total Employees")
+    plt.xlabel("")
     plt.ylabel("")
+    plt.legend(title="Department", bbox_to_anchor=(0.98, 1), loc='upper left')
+    plt.grid(True)
     plt.show()
+    print(f"the department counts is {department_counts}")
+    return department_counts
 
 
 # 10. Analyze hiring trends by city over the years
 def hiring_trend_by_city(df):
     df['Join_Year'] = df['Join_Date'].dt.year
+
     hiring_trends = (
         df.groupby(['City', 'Join_Year']).size()
         .reset_index(name='Hires')
@@ -161,9 +173,25 @@ def hiring_trend_by_city(df):
     plt.title("Hiring Trends by City Over the Years")
     plt.xlabel("Year")
     plt.ylabel("Number of Hires")
-    plt.legend(title="City", bbox_to_anchor=(1.05, 1), loc='upper left')
+    plt.legend(title="City", bbox_to_anchor=(0.98, 1), loc='upper left')
     plt.grid(True)
     plt.show()
+    return hiring_trends
+
+
+def generate_report_fit(df: DataFrame):
+    return {
+        # "department_performance": department_performance_analysis(df),  # 1
+        # "salary_pivot": salary_pivot_table(df),  # 2
+        # "hiring_trend": hiring_trend_analysis(df),  # 3
+        # "average_salary_by_agegroup":  average_salary_by_age_group(df),  # 4
+        # "top_cities_performance": top_cities_by_performance(df),  # 5
+        # "salary_distribution_byage": salary_distribution_by_age(df),  # 6
+        # "longest_tenure_bydepartment": longest_tenure_by_department(df),  # 7
+        # "performance_salarycorrelation": performance_salary_correlation(df),  # 8
+        "department_sizevisualization": department_size_visualization(df),  # 9
+        # "hiring_trend_bycity": hiring_trend_by_city(df)  # 10
+    }
 
 
 # Combining analyses into a comprehensive report
@@ -177,34 +205,42 @@ def generate_report(df: DataFrame):
     salary_pivot = salary_pivot_table(df)
 
     print("3) Time-series analysis of hiring trends")
-    hiring_trend_analysis(df)
+    hiring_trend = hiring_trend_analysis(df)
 
     print("4) Average Salary by Age Group:")
-    average_salary_by_age_group(df)
+    average_salary_by_agegroup = average_salary_by_age_group(df)
 
     print("5) Top Cities by Performance:")
-    top_cities_by_performance(df)
+    top_cities_performance = top_cities_by_performance(df)
 
     print("6) Salary Distribution by Age:")
-    salary_distribution_by_age(df)
+    salary_distribution_byage = salary_distribution_by_age(df)
 
     print("7) Longest Tenure by Department:")
-    longest_tenure_by_department(df)
+    longest_tenure_bydepartment = longest_tenure_by_department(df)
 
     print("8) Performance and Salary Correlation:")
-    performance_salary_correlation(df)
+    performance_salarycorrelation = performance_salary_correlation(df)
 
     print("9) Department Size Visualization:")
-    department_size_visualization(df)
+    department_sizevisualization = department_size_visualization(df)
 
     print("10) Hiring Trends by City:")
-    hiring_trend_by_city(df)
+    hiring_trend_bycity = hiring_trend_by_city(df)
 
-    return {}
-    # return {
-    #     "department_performance": department_performance,
-    #     "salary_pivot": salary_pivot
-    # }
+    # return {}
+    return {
+        "department_performance": department_performance,
+        "salary_pivot": salary_pivot,
+        "hiring_trend": hiring_trend,
+        "average_salary_by_agegroup": average_salary_by_agegroup,
+        "top_cities_performance": top_cities_performance,
+        "salary_distribution_byage": salary_distribution_byage,
+        "longest_tenure_bydepartment": longest_tenure_bydepartment,
+        "performance_salarycorrelation": performance_salarycorrelation,
+        "department_sizevisualization": department_sizevisualization,
+        "hiring_trend_bycity": hiring_trend_bycity
+    }
 
 # test if it works!
 comment = """
@@ -236,4 +272,7 @@ def detect_salary_anomalies(data):
 # Example Use Cases
 if __name__ == "__main__":
     # Run all analyses
-    report = generate_report(df)
+    report = generate_report_fit(df)
+
+# https://chatgpt.com/c/6758be0f-fdf0-800c-98b6-aebae7632d04 (single-pandas-project: 001)
+# https://chatgpt.com/c/674b65b9-fecc-800c-8311-7f681df9b305 (projects: pandas)

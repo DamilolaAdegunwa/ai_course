@@ -13,9 +13,10 @@ def simulate_data(samples=1000, features=5, anomaly_ratio=0.05):
     """
     Simulates synthetic data with a mix of normal and anomalous values.
     """
-    normal_data = np.random.normal(loc=50, scale=10, size=(int(samples * (1 - anomaly_ratio)), features))
-    anomalies = np.random.uniform(low=0, high=100, size=(int(samples * anomaly_ratio), features))
-    return np.vstack([normal_data, anomalies])
+    normal_data = np.random.normal(loc=50, scale=10, size=(int(samples * (1 - anomaly_ratio)), features))  # mean=50, sd=10, size=95% of the sample, and 5 columns
+    anomalies = np.random.uniform(low=0, high=100, size=(int(samples * anomaly_ratio), features))  # min=0, max=100, size=5% of the sample, and 5 columns
+    data = np.vstack([normal_data, anomalies])  # stack the "normal_data" up top of the "anomalies" data
+    return data
 
 
 # Anomaly Detection
@@ -55,6 +56,7 @@ def main():
 
     # Display Results
     print("Simulated Data Shape:", data.shape)
+    print("Anomalies Detected:", anomalies)
     print("Number of Anomalies Detected:", np.sum(anomalies))
     print("\nCovariance Matrix:\n", covariance_matrix)
     print("\nCorrelation Matrix:\n", correlation_matrix)
@@ -62,3 +64,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # print(simulate_data())

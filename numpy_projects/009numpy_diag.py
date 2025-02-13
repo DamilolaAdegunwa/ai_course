@@ -1,5 +1,6 @@
 import numpy as np
 
+
 # 1a. Create a diagonal matrix from a given array
 def example_1a():
     array = np.array([1, 2, 3, 4])
@@ -11,12 +12,14 @@ def example_1a():
     #  [0 0 3 0]
     #  [0 0 0 4]]
 
+
 # 1b. Extract the diagonal elements from a 2D matrix
 def example_1b():
     matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     diagonal = np.diag(matrix)
     print("1b. Diagonal Elements:", diagonal)
     # Output: [1 5 9]
+
 
 # 2a. Create a 2D matrix with a diagonal from a flattened array
 def example_2a():
@@ -27,6 +30,7 @@ def example_2a():
     # [[ 5  0  0]
     #  [ 0 10  0]
     #  [ 0  0 15]]
+
 
 # 2b. Embed diagonal elements within a larger matrix
 def example_2b():
@@ -39,6 +43,7 @@ def example_2b():
     #  [0 0 0 6]
     #  [0 0 0 0]]
 
+
 # 3a. Create a triangular matrix with ones below the main diagonal
 def example_3a():
     tri_matrix = np.tri(4, 4, k=0, dtype=int)
@@ -49,6 +54,7 @@ def example_3a():
     #  [1 1 1 0]
     #  [1 1 1 1]]
 
+
 # 3b. Triangular matrix for masking operations
 def example_3b():
     tri_mask = np.tri(3, 5, k=-1, dtype=int)
@@ -57,6 +63,7 @@ def example_3b():
     # [[0 0 0 0 0]
     #  [1 0 0 0 0]
     #  [1 1 0 0 0]]
+
 
 # 4a. Extract the lower triangle of a matrix
 def example_4a():
@@ -68,6 +75,7 @@ def example_4a():
     #  [4 5 0]
     #  [7 8 9]]
 
+
 # 4b. Lower triangular matrix with offset
 def example_4b():
     matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
@@ -77,6 +85,7 @@ def example_4b():
     # [[0 0 0]
     #  [4 0 0]
     #  [7 8 0]]
+
 
 # 5a. Extract the upper triangle of a matrix
 def example_5a():
@@ -88,6 +97,7 @@ def example_5a():
     #  [0 5 6]
     #  [0 0 9]]
 
+
 # 5b. Upper triangular matrix with offset
 def example_5b():
     matrix = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
@@ -97,6 +107,7 @@ def example_5b():
     # [[0 2 3]
     #  [0 0 6]
     #  [0 0 0]]
+
 
 # 6a. Create a Vandermonde matrix
 def example_6a():
@@ -109,6 +120,7 @@ def example_6a():
     #  [ 1  3  9 27]
     #  [ 1  4 16 64]]
 
+
 # 6b. Generate a Vandermonde matrix for polynomial fitting
 def example_6b():
     x = np.array([1, 2, 3])
@@ -119,11 +131,12 @@ def example_6b():
     #  [ 4  2  1]
     #  [ 9  3  1]]
 
+
 # 7a. Block matrix construction
 def example_7a():
     A = np.array([[1, 2], [3, 4]])
     B = np.array([[5, 6], [7, 8]])
-    #block_matrix = np.bmat([[A, B.T], [B, None]])
+    # block_matrix = np.bmat([[A, B.T], [B, None]])
     block_matrix = np.bmat([[A, B.T], [B, A.T]])
     print("7a. Block Matrix:\n", block_matrix)
     # Output:
@@ -131,6 +144,7 @@ def example_7a():
     #  [3 4 6 8]
     #  [5 6 1 3]
     #  [7 8 2 4]]
+
 
 # 7b. Combine identity and random matrices
 def example_7b():
@@ -140,6 +154,7 @@ def example_7b():
     print("7b. Combined Block Matrix:\n", block_combo)
     # Output:
     # Block matrix combining identity and random matrices
+
 
 # Run all examples
 example_1a()
