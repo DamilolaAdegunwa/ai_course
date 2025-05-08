@@ -2,14 +2,17 @@ import pandas as pd
 import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
 
+
 # Load dataset
 def load_data(file_path):
     return pd.read_csv(file_path)
+
 
 # Dynamic aggregation
 def aggregate_data(data, group_by, metrics):
     aggregated = data.groupby(group_by)[metrics].sum()
     return aggregated
+
 
 # Forecast KPIs
 def forecast_kpi(data, metric, steps=3, order=(1, 1, 1)):
@@ -18,12 +21,14 @@ def forecast_kpi(data, metric, steps=3, order=(1, 1, 1)):
     forecast = model_fit.forecast(steps=steps)
     return forecast
 
+
 # Detect anomalies
 def detect_kpi_anomalies(data, metric, threshold=2.5):
     mean = data[metric].mean()
     std = data[metric].std()
     anomalies = data[np.abs(data[metric] - mean) > threshold * std]
     return anomalies
+
 
 # Example usage
 if __name__ == "__main__":

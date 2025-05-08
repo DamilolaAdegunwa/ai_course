@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import time
 
 
-# Simulated real-time API data ingestion
+# 1. Simulated real-time API data ingestion
 def fetch_real_time_data(api_url):
     response = requests.get(api_url)
     if response.status_code == 200:
@@ -16,7 +16,7 @@ def fetch_real_time_data(api_url):
         return pd.DataFrame()
 
 
-# Load batch data (CSV, JSON) and unify schema
+# 2. Load batch data (CSV, JSON) and unify schema
 def load_and_unify_data(csv_path, json_path, key_column):
     # Load CSV
     csv_data = pd.read_csv(csv_path)
@@ -30,14 +30,14 @@ def load_and_unify_data(csv_path, json_path, key_column):
     return unified_data
 
 
-# Transform and normalize data
+# 3. Transform and normalize data
 def normalize_data(df, columns_to_normalize):
     for col in columns_to_normalize:
         df[col] = (df[col] - df[col].mean()) / df[col].std()
     return df
 
 
-# Real-time anomaly detection
+# 4. Real-time anomaly detection
 def detect_streaming_anomalies(df, column, threshold=3):
     mean = df[column].mean()
     std = df[column].std()
@@ -45,7 +45,7 @@ def detect_streaming_anomalies(df, column, threshold=3):
     return df
 
 
-# Aggregation for hourly data
+# 5. Aggregation for hourly data
 def aggregate_minute_to_hourly(df, time_column, value_column):
     df[time_column] = pd.to_datetime(df[time_column])
     df.set_index(time_column, inplace=True)
@@ -53,7 +53,7 @@ def aggregate_minute_to_hourly(df, time_column, value_column):
     return hourly_data
 
 
-# Pipeline orchestration
+# 6. Pipeline orchestration
 def data_pipeline(api_url, csv_path, json_path, key_column, columns_to_normalize):
     print("Fetching real-time data...")
     real_time_data = fetch_real_time_data(api_url)
@@ -73,15 +73,15 @@ def data_pipeline(api_url, csv_path, json_path, key_column, columns_to_normalize
     return normalized_data, real_time_data, hourly_data
 
 
-# Visualization
+# 7. Visualization
 def visualize_data(df, column, title):
     import matplotlib.pyplot as plt
     df[column].plot(figsize=(12, 6), title=title)
     plt.show()
 
 
-# Test the pipeline
-if __name__ == "__main__":
+# 8. Dashboard
+def generate_report():
     # Simulate inputs
     api_url = "https://api.example.com/real-time-data"  # Replace with an actual API
     csv_path = "user_profiles.csv"  # Replace with actual file
@@ -108,6 +108,11 @@ if __name__ == "__main__":
 
     # Visualize hourly trends
     visualize_data(hourly_data, 'value', "Hourly Aggregated Trends")
+
+
+# Test the pipeline
+if __name__ == "__main__":
+    generate_report()
 
 
 comment = """

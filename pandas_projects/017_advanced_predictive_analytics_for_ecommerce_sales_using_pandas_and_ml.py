@@ -34,15 +34,19 @@ def feature_engineering(df):
 
 # Model Building Function
 def train_model(X_train, y_train, model_type='linear'):
+    model: LinearRegression | RandomForestRegressor | XGBRegressor
     if model_type == 'linear':
         model = LinearRegression()
+        model.fit(X_train, y_train)
+        return model
     elif model_type == 'random_forest':
         model = RandomForestRegressor()
+        model.fit(X_train, y_train)
+        return model
     elif model_type == 'xgboost':
         model = XGBRegressor()
-
-    model.fit(X_train, y_train)
-    return model
+        model.fit(X_train, y_train)
+        return model
 
 
 # Hyperparameter Tuning with Grid Search

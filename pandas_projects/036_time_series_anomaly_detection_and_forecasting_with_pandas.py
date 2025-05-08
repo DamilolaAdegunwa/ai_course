@@ -3,13 +3,16 @@ import numpy as np
 from statsmodels.tsa.arima.model import ARIMA
 import matplotlib.pyplot as plt
 
+
 # Load time series data
 def load_time_series(file_path):
     return pd.read_csv(file_path, parse_dates=['Date'], index_col='Date')
 
+
 # Impute missing values
 def impute_missing_values(data, method='linear'):
     return data.interpolate(method=method)
+
 
 # Detect anomalies
 def detect_anomalies(data, threshold=3):
@@ -18,12 +21,14 @@ def detect_anomalies(data, threshold=3):
     anomalies = data[np.abs(data - mean) > threshold * std]
     return anomalies
 
+
 # ARIMA Forecasting
 def arima_forecast(data, steps=3, order=(1, 1, 1)):
     model = ARIMA(data, order=order)
     model_fit = model.fit()
     forecast = model_fit.forecast(steps=steps)
     return forecast
+
 
 # Plotting time series with anomalies
 def plot_anomalies(data, anomalies):
@@ -33,6 +38,7 @@ def plot_anomalies(data, anomalies):
     plt.title("Time Series with Anomalies")
     plt.legend()
     plt.show()
+
 
 # Example Usage
 if __name__ == "__main__":

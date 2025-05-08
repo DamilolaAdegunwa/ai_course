@@ -3,7 +3,7 @@ from itertools import combinations
 from collections import defaultdict
 
 
-# Function to generate item combinations and calculate support
+# 1. Function to generate item combinations and calculate support
 def generate_frequent_itemsets(transactions, min_support=0.5):
     item_count = defaultdict(int)
     total_transactions = len(transactions)
@@ -22,7 +22,7 @@ def generate_frequent_itemsets(transactions, min_support=0.5):
     return frequent_itemsets
 
 
-# Function to calculate confidence and lift
+# 2. Function to calculate confidence and lift
 def calculate_association_rules(frequent_itemsets, transactions):
     total_transactions = len(transactions)
     rules = []
@@ -43,7 +43,7 @@ def calculate_association_rules(frequent_itemsets, transactions):
     return pd.DataFrame(rules)
 
 
-# Simulate real-time transaction data
+# 3. Simulate real-time transaction data
 def simulate_transactions(data, chunk_size):
     for i in range(0, len(data), chunk_size):
         yield data.iloc[i:i + chunk_size]

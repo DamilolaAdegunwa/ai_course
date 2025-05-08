@@ -3,10 +3,12 @@ import numpy as np
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 
+
 # Load Dataset
 def load_data(file_path):
     data = pd.read_csv(file_path, parse_dates=['Timestamp'], index_col='Timestamp')
     return data
+
 
 # Dynamic Anomaly Detection
 def detect_anomalies(data, features, z_threshold=3):
@@ -18,6 +20,7 @@ def detect_anomalies(data, features, z_threshold=3):
         anomalies[feature] = data[data[f'{feature}_Anomaly']].index.tolist()
     return anomalies
 
+
 # PCA for Root Cause Analysis
 def root_cause_analysis(data, features, n_components=2):
     pca = PCA(n_components=n_components)
@@ -25,11 +28,13 @@ def root_cause_analysis(data, features, n_components=2):
     explained_variance = pca.explained_variance_ratio_
     return reduced_data, explained_variance
 
+
 # Correlation Analysis
 def correlation_analysis(data, features):
     corr_matrix = data[features].corr()
     print("Correlation Matrix:\n", corr_matrix)
     return corr_matrix
+
 
 # Visualize PCA Results
 def visualize_pca(reduced_data, explained_variance):
@@ -39,6 +44,7 @@ def visualize_pca(reduced_data, explained_variance):
     plt.xlabel('Principal Component 1')
     plt.ylabel('Principal Component 2')
     plt.show()
+
 
 # Main Execution
 if __name__ == "__main__":

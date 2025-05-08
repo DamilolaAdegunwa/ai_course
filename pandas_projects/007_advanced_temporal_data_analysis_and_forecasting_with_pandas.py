@@ -1,15 +1,22 @@
 import pandas as pd
 import numpy as np
+from pandas import DataFrame
 from statsmodels.tsa.seasonal import seasonal_decompose
 import matplotlib.pyplot as plt
 
 # Load the Air Quality dataset
-file_path = "air_quality_no2.csv"
-df = pd.read_csv(file_path, parse_dates=["datetime"], index_col="datetime")
+# file_path = "air_quality_no2.csv"
+# file_path = "air_quality_long_edited.csv"
+# df = pd.read_csv(file_path, parse_dates=["datetime"], index_col="datetime")
+
+file_path = "air_quality_long_edited.xlsx"
+df = pd.read_excel(file_path, parse_dates=["datetime"], index_col="datetime")
+
+# df = pd.read_csv(file_path)
 
 
 # Example Function 1: Temporal Feature Extraction
-def extract_temporal_features(df):
+def extract_temporal_features(df: DataFrame):
     df["year"] = df.index.year
     df["month"] = df.index.month
     df["day_of_week"] = df.index.day_name()
@@ -17,19 +24,28 @@ def extract_temporal_features(df):
     return df
 
 
-# Example Function 2: Aggregating Data
-def aggregate_by_day_of_week(df, column):
-    return df.groupby("day_of_week")[column].mean().sort_index()
+# Step 1: Temporal Feature Extraction
+df = extract_temporal_features(df)
+# print("Temporal features added:")
+# print(df.head())
+
+
+# Example Function 2: Aggregating Air Pollutant by day of the week
+def aggregate_by_day_of_week(df: DataFrame, pollutant=None):
+    aggr = df[df["parameter"].str.lower() == pollutant.lower()]
+    result = aggr.groupby("day_of_week")["value"].mean().sort_index()
+    print(f"aggregate_by_day_of_week: {result}")
+    return result
 
 
 # Example Function 3: Rolling Statistics
-def apply_rolling_mean(df, column, window):
-    df[f"{column}_RollingMean_{window}"] = df[column].rolling(window=window).mean()
+def apply_rolling_mean(df: DataFrame, window):
+    df[f"value_RollingMean_{window}"] = df["value"].rolling(window=window).mean()
     return df
 
 
 # Example Function 4: Seasonal Decomposition
-def decompose_time_series(df, column, freq):
+def decompose_time_series(df: DataFrame, column, freq):
     decomposition = seasonal_decompose(df[column].dropna(), model='additive', period=freq)
     decomposition.plot()
     plt.show()
@@ -37,40 +53,39 @@ def decompose_time_series(df, column, freq):
 
 
 # Example Function 5: Naive Forecasting
-def naive_forecast(df, column, steps):
-    forecast = [df[column].iloc[-1]] * steps
+def naive_forecast(df: DataFrame, column, steps):
+    forecast: list = [df[column].iloc[-1]] * steps
+    print(forecast)
     return forecast
 
 
-# Test the pipeline
-if __name__ == "__main__":
-    # Step 1: Temporal Feature Extraction
-    df = extract_temporal_features(df)
-    print("Temporal features added:")
-    print(df.head())
+def generate_report(df: DataFrame):
 
     # Step 2: Aggregate NO2 by Day of the Week
-    weekly_avg = aggregate_by_day_of_week(df, "NO2")
+    weekly_avg = aggregate_by_day_of_week(df, "no2")
     print("Weekly Average NO2 Concentrations:")
     print(weekly_avg)
 
     # Step 3: Apply Rolling Mean
-    df = apply_rolling_mean(df, "NO2", window=7)
+    df = apply_rolling_mean(df, window=7)
     print("Rolling Mean applied. Sample data:")
     print(df.head(10))
 
     # Step 4: Decompose Time Series
     print("Decomposing the time series...")
-    trend, seasonal, resid = decompose_time_series(df, "NO2", freq=365)
+    trend, seasonal, resid = decompose_time_series(df, "value", freq=365)
     print("Trend Sample:")
     print(trend.head())
 
     # Step 5: Naive Forecast
     print("Naive Forecast for 7 steps ahead:")
-    forecast = naive_forecast(df, "NO2", steps=7)
+    forecast = naive_forecast(df, "parameter", steps=7)
     print(forecast)
 
 
+# Test the pipeline
+if __name__ == "__main__":
+    generate_report(df)
 # https://chatgpt.com/c/674b65b9-fecc-800c-8311-7f681df9b305 (all pandas projects)
 # https://chatgpt.com/c/67681655-c04c-800c-a8e9-bea0cacfa327 (pandas project 007)
 comment = """

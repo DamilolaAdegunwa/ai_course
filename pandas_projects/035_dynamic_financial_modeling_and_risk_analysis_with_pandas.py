@@ -2,14 +2,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 # Load stock price data
 def load_stock_data(file_path):
     return pd.read_csv(file_path, parse_dates=['Date'], index_col='Date')
+
 
 # Calculate daily returns
 def calculate_daily_returns(data):
     returns = data.pct_change().dropna()
     return returns
+
 
 # Portfolio Optimization
 def optimize_portfolio(returns, num_portfolios=10000):
@@ -31,12 +34,14 @@ def optimize_portfolio(returns, num_portfolios=10000):
 
     return results, weights_record
 
+
 # Value at Risk (VaR) Calculation
 def calculate_var(returns, confidence_level=0.95):
     mean_return = returns.mean()
     std_dev = returns.std()
     var = -mean_return - std_dev * np.percentile(returns, 1 - confidence_level)
     return var
+
 
 # Monte Carlo Simulation
 def monte_carlo_simulation(returns, num_simulations=1000, num_days=252):
@@ -52,6 +57,7 @@ def monte_carlo_simulation(returns, num_simulations=1000, num_days=252):
 
     return np.array(simulated_prices)
 
+
 # Visualization
 def plot_simulations(simulations, num_simulations=100):
     plt.figure(figsize=(10, 6))
@@ -61,6 +67,7 @@ def plot_simulations(simulations, num_simulations=100):
     plt.xlabel("Days")
     plt.ylabel("Portfolio Value")
     plt.show()
+
 
 # Example Usage
 if __name__ == "__main__":

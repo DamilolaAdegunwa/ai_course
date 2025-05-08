@@ -7,10 +7,12 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import classification_report
 
+
 # Load Multivariate Time Series Data
 def load_multivariate_data(file_path):
     data = pd.read_csv(file_path, parse_dates=['Timestamp'], index_col='Timestamp')
     return data
+
 
 # Feature Engineering
 def feature_engineering(data, target_column):
@@ -34,6 +36,7 @@ def feature_engineering(data, target_column):
     data = data.dropna()  # Remove rows with NaN values after rolling/lagging
     return data
 
+
 # Preprocess Data for Machine Learning
 def preprocess_data(data, categorical_columns, numerical_columns, target_column):
     X = data.drop(target_column, axis=1)
@@ -46,6 +49,7 @@ def preprocess_data(data, categorical_columns, numerical_columns, target_column)
         ]
     )
     return X, y, preprocessor
+
 
 # Train and Evaluate Model
 def train_model(X, y, preprocessor):
@@ -60,6 +64,7 @@ def train_model(X, y, preprocessor):
 
     print("Classification Report:\n", classification_report(y_test, y_pred))
     return model
+
 
 # Main Execution
 if __name__ == "__main__":

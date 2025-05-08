@@ -1,37 +1,43 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pandas import DataFrame
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.arima.model import ARIMA
 from sklearn.ensemble import IsolationForest
 
-# Function to preprocess time series data
-def preprocess_time_series(df, date_col, value_col):
+
+# 1. Function to preprocess time series data
+def preprocess_time_series(df: DataFrame, date_col, value_col):
     df[date_col] = pd.to_datetime(df[date_col])
     df.set_index(date_col, inplace=True)
     df = df[[value_col]].sort_index()
     return df
 
-# Function for time series decomposition
-def decompose_time_series(df, column):
+
+# 2. Function for time series decomposition
+def decompose_time_series(df: DataFrame, column):
     decomposition = seasonal_decompose(df[column], model='additive', period=7)
     return decomposition
 
-# Function for anomaly detection
-def detect_anomalies(df, column):
+
+# 3. Function for anomaly detection
+def detect_anomalies(df: DataFrame, column):
     model = IsolationForest(contamination=0.01, random_state=42)
     df['Anomaly'] = model.fit_predict(df[[column]])
     anomalies = df[df['Anomaly'] == -1]
     return anomalies
 
-# Function for multi-step forecasting
-def forecast_time_series(df, column, steps=5):
+
+# 4. Function for multi-step forecasting
+def forecast_time_series(df: DataFrame, column, steps=5):
     model = ARIMA(df[column], order=(5, 1, 0))
     model_fit = model.fit()
     forecast = model_fit.forecast(steps=steps)
     return forecast
 
-# Visualization function
+
+# 5. Visualization function
 def plot_decomposition(decomposition):
     fig, axes = plt.subplots(4, 1, figsize=(10, 8))
     decomposition.observed.plot(ax=axes[0], title='Observed')
@@ -40,6 +46,7 @@ def plot_decomposition(decomposition):
     decomposition.resid.plot(ax=axes[3], title='Residual')
     plt.tight_layout()
     plt.show()
+
 
 # Main function
 if __name__ == "__main__":

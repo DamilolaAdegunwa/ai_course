@@ -8,21 +8,21 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 
-# Load Dataset
+# 1. Load Dataset
 def load_time_series_data(file_path, date_col, value_col):
     df = pd.read_csv(file_path, parse_dates=[date_col])
     df.set_index(date_col, inplace=True)
     return df[[value_col]].dropna()
 
 
-# Preprocess Data: Fill Missing Values and Resample
+# 2. Preprocess Data: Fill Missing Values and Resample
 def preprocess_time_series(df, freq='D'):
     df = df.resample(freq).mean()
     df.fillna(method='ffill', inplace=True)
     return df
 
 
-# Decompose Time Series
+# 3. Decompose Time Series
 def decompose_time_series(df, column, model='additive'):
     decomposition = seasonal_decompose(df[column], model=model)
     decomposition.plot()
@@ -30,14 +30,14 @@ def decompose_time_series(df, column, model='additive'):
     return decomposition
 
 
-# Detect Anomalies
+# 4. Detect Anomalies
 def detect_anomalies(df, column, contamination=0.01):
     model = IsolationForest(contamination=contamination, random_state=42)
     df['Anomaly'] = model.fit_predict(df[[column]])
     return df
 
 
-# Forecast Future Values using Linear Regression
+# 5. Forecast Future Values using Linear Regression
 def forecast_time_series(df, column, forecast_days=7):
     df['Time'] = np.arange(len(df))
     X = df[['Time']]
@@ -54,7 +54,7 @@ def forecast_time_series(df, column, forecast_days=7):
     return forecast_df
 
 
-# Visualization: Plot Trends and Anomalies
+# 6. Visualization: Plot Trends and Anomalies
 def visualize_trends_and_anomalies(df, column):
     plt.figure(figsize=(12, 6))
     sns.lineplot(data=df, x=df.index, y=column, label='Observed')
@@ -66,8 +66,8 @@ def visualize_trends_and_anomalies(df, column):
     plt.show()
 
 
-# Testing the Pipeline
-if __name__ == "__main__":
+# 7. Use all the above methods to generate a report dashboard
+def generate_report():
     # File Path and Columns
     file_path = "titanic.csv"  # Replace with actual time-series file
     date_col = "Date"  # Replace with actual date column
@@ -101,6 +101,10 @@ if __name__ == "__main__":
     plt.legend()
     plt.show()
 
+
+# Testing the Pipeline
+if __name__ == "__main__":
+    generate_report()
 
 comment = """
 ### Project Title: **AI-Driven Time Series Forecasting and Anomaly Detection with Pandas**  

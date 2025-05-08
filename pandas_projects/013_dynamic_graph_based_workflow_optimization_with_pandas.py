@@ -3,14 +3,14 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 
-# Load workflow data
+# 1. Load workflow data
 def load_workflow_data(file_path):
     df = pd.read_csv(file_path)
     df['Depends_On'] = df['Depends_On'].fillna('').apply(lambda x: x.split(','))
     return df
 
 
-# Build directed graph from workflow data
+# 2. Build directed graph from workflow data
 def build_workflow_graph(df):
     G = nx.DiGraph()
     for _, row in df.iterrows():
@@ -23,7 +23,7 @@ def build_workflow_graph(df):
     return G
 
 
-# Detect cycles in the graph
+# 3. Detect cycles in the graph
 def detect_cycles(G):
     try:
         cycles = nx.find_cycle(G, orientation='original')
@@ -32,7 +32,7 @@ def detect_cycles(G):
         return None
 
 
-# Compute critical path
+# 4. Compute critical path
 def compute_critical_path(G):
     if not nx.is_directed_acyclic_graph(G):
         raise ValueError("Graph contains cycles! Critical path computation is invalid.")
@@ -40,13 +40,13 @@ def compute_critical_path(G):
     return longest_path
 
 
-# Rank tasks using PageRank
+# 5. Rank tasks using PageRank
 def rank_tasks(G):
     pagerank_scores = nx.pagerank(G, alpha=0.85)
     return sorted(pagerank_scores.items(), key=lambda x: x[1], reverse=True)
 
 
-# Visualize the workflow graph
+# 6. Visualize the workflow graph
 def visualize_graph(G, title):
     pos = nx.spring_layout(G)
     plt.figure(figsize=(12, 8))
@@ -58,7 +58,7 @@ def visualize_graph(G, title):
     plt.show()
 
 
-# Workflow optimization pipeline
+# 7. Workflow optimization pipeline
 def workflow_optimization_pipeline(file_path):
     print("Loading workflow data...")
     df = load_workflow_data(file_path)

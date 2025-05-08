@@ -6,7 +6,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 import matplotlib.pyplot as plt
 
 
-# Load and preprocess time-series data
+# 1. Load and preprocess time-series data
 def load_time_series_data(file_path, date_column, target_column):
     df = pd.read_csv(file_path, parse_dates=[date_column])
     df.sort_values(by=date_column, inplace=True)
@@ -14,7 +14,7 @@ def load_time_series_data(file_path, date_column, target_column):
     return df[[target_column]]
 
 
-# Create lagged features for time-series data
+# 2. Create lagged features for time-series data
 def create_lag_features(df, target_column, lags):
     for lag in range(1, lags + 1):
         df[f'lag_{lag}'] = df[target_column].shift(lag)
@@ -22,7 +22,7 @@ def create_lag_features(df, target_column, lags):
     return df
 
 
-# Train a predictive model
+# 3. Train a predictive model
 def train_forecasting_model(df, target_column, test_size=0.2):
     features = [col for col in df.columns if col != target_column]
     X = df[features]
@@ -40,7 +40,7 @@ def train_forecasting_model(df, target_column, test_size=0.2):
     return model, predictions, y_test, metrics
 
 
-# Forecast future values
+# 4. Forecast future values
 def forecast_future_values(model, df, steps, target_column):
     features = [col for col in df.columns if col != target_column]
     last_row = df.iloc[-1][features].values.reshape(1, -1)
@@ -55,7 +55,7 @@ def forecast_future_values(model, df, steps, target_column):
     return forecast
 
 
-# Visualization function
+# 5. Visualization function
 def plot_forecast(actual, predictions, future_forecast, title):
     plt.figure(figsize=(12, 6))
     plt.plot(actual.index, actual.values, label='Actual')
@@ -67,7 +67,7 @@ def plot_forecast(actual, predictions, future_forecast, title):
     plt.show()
 
 
-# Example pipeline
+# 6. Example pipeline
 def forecasting_pipeline(file_path, date_column, target_column, lags, steps):
     print("Loading and preprocessing data...")
     data = load_time_series_data(file_path, date_column, target_column)

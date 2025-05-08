@@ -1,25 +1,30 @@
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
+from pandas import DataFrame
+
 
 # Function to preprocess data for network creation
-def preprocess_network_data(df, source_col, target_col, weight_col=None):
+def preprocess_network_data(df: DataFrame, source_col, target_col, weight_col=None):
     df = df[[source_col, target_col, weight_col]].dropna() if weight_col else df[[source_col, target_col]]
     df = df.groupby([source_col, target_col]).size().reset_index(name='Weight') if not weight_col else df
     return df
 
+
 # Function to create a graph
-def create_graph(df, source_col, target_col, weight_col=None):
+def create_graph(df: DataFrame, source_col, target_col, weight_col=None):
     G = nx.DiGraph()  # Directed graph
     for _, row in df.iterrows():
         G.add_edge(row[source_col], row[target_col], weight=row.get(weight_col, 1))
     return G
+
 
 # Function to calculate graph metrics
 def calculate_graph_metrics(G):
     centrality = nx.degree_centrality(G)
     clustering = nx.clustering(G.to_undirected())
     return centrality, clustering
+
 
 # Function to visualize the graph
 def visualize_graph(G, title):
@@ -28,6 +33,7 @@ def visualize_graph(G, title):
     nx.draw(G, pos, with_labels=True, node_size=700, node_color='skyblue', edge_color='gray')
     plt.title(title)
     plt.show()
+
 
 # Main function
 if __name__ == "__main__":

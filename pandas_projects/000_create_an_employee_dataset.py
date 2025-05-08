@@ -106,7 +106,5 @@ new_dataset = pd.DataFrame({
 output_path = "750000_employee_dataset.xlsx"
 new_dataset.to_excel(output_path, index=False)
 
-#---
-#---
-#---
-#---
+# ---
+_a: np.ndarray = np.random.normal

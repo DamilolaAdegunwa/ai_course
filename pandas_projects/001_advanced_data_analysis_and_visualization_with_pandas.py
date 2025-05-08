@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from pandas import DataFrame
-
+from scipy.stats import zscore
 # Load the dataset
 file_path: str = "employee_dataset.xlsx"
 df: DataFrame = pd.read_excel(file_path)
@@ -179,18 +179,43 @@ def hiring_trend_by_city(df):
     return hiring_trends
 
 
+# 11. Detect any anomalies in salary distribution using z-score analysis
+def detect_salary_anomalies(data) -> DataFrame:
+    data['Salary Z-Score'] = zscore(data['Salary'])
+    anomaly: DataFrame = pd.DataFrame(data[data['Salary Z-Score'].abs() > 3])  # Employees with z-score > 3 or < -3
+    print(anomaly)
+    return anomaly
+
+
+# 12. Identify the top 5 highest-paid employees in each department
+def top_5_highest_paid_employees(data):
+    result = data.groupby('Department').apply(lambda x: x.nlargest(5, 'Salary')).reset_index(drop=True)
+    print(result)
+    return result
+
+
+# 13. Calculate the percentage of employees in each department who have a performance score above a threshold
+def high_performance_percentage(data, threshold=4):
+    result = data.groupby('Department').apply(lambda x: (x['Performance_Score'] > threshold).mean() * 100)
+    print(result)
+    return result
+
+
 def generate_report_fit(df: DataFrame):
     return {
-        # "department_performance": department_performance_analysis(df),  # 1
-        # "salary_pivot": salary_pivot_table(df),  # 2
-        # "hiring_trend": hiring_trend_analysis(df),  # 3
-        # "average_salary_by_agegroup":  average_salary_by_age_group(df),  # 4
-        # "top_cities_performance": top_cities_by_performance(df),  # 5
-        # "salary_distribution_byage": salary_distribution_by_age(df),  # 6
-        # "longest_tenure_bydepartment": longest_tenure_by_department(df),  # 7
-        # "performance_salarycorrelation": performance_salary_correlation(df),  # 8
+        "department_performance": department_performance_analysis(df),  # 1
+        "salary_pivot": salary_pivot_table(df),  # 2
+        "hiring_trend": hiring_trend_analysis(df),  # 3
+        "average_salary_by_agegroup":  average_salary_by_age_group(df),  # 4
+        "top_cities_performance": top_cities_by_performance(df),  # 5
+        "salary_distribution_byage": salary_distribution_by_age(df),  # 6
+        "longest_tenure_bydepartment": longest_tenure_by_department(df),  # 7
+        "performance_salarycorrelation": performance_salary_correlation(df),  # 8
         "department_sizevisualization": department_size_visualization(df),  # 9
-        # "hiring_trend_bycity": hiring_trend_by_city(df)  # 10
+        "hiring_trend_bycity": hiring_trend_by_city(df),  # 10
+        "detect_salary_anomalies": detect_salary_anomalies(df),  # 11
+        "top_5_highest_paid_employees": top_5_highest_paid_employees(df),  # 12
+        "high_performance_percentage": high_performance_percentage(df),  # 13
     }
 
 
@@ -228,30 +253,27 @@ def generate_report(df: DataFrame):
     print("10) Hiring Trends by City:")
     hiring_trend_bycity = hiring_trend_by_city(df)
 
+    print("11) Detect any anomalies in salary distribution using z-score analysis:")
+    detect_salary_anomalies_ = detect_salary_anomalies(df)
+
     # return {}
     return {
-        "department_performance": department_performance,
-        "salary_pivot": salary_pivot,
-        "hiring_trend": hiring_trend,
-        "average_salary_by_agegroup": average_salary_by_agegroup,
-        "top_cities_performance": top_cities_performance,
-        "salary_distribution_byage": salary_distribution_byage,
-        "longest_tenure_bydepartment": longest_tenure_bydepartment,
-        "performance_salarycorrelation": performance_salarycorrelation,
-        "department_sizevisualization": department_sizevisualization,
-        "hiring_trend_bycity": hiring_trend_bycity
+        "department_performance": department_performance, # 1
+        "salary_pivot": salary_pivot,  # 2
+        "hiring_trend": hiring_trend,  # 3
+        "average_salary_by_agegroup": average_salary_by_agegroup,  # 4
+        "top_cities_performance": top_cities_performance,  # 5
+        "salary_distribution_byage": salary_distribution_byage,  # 6
+        "longest_tenure_bydepartment": longest_tenure_bydepartment,  # 7
+        "performance_salarycorrelation": performance_salarycorrelation,  # 8
+        "department_sizevisualization": department_sizevisualization,  # 9
+        "hiring_trend_bycity": hiring_trend_bycity,  # 10
+        "detect_salary_anomalies_": detect_salary_anomalies_,  # 11
     }
+
 
 # test if it works!
 comment = """
-# 4. Identify the top 5 highest-paid employees in each department
-def top_5_highest_paid_employees(data):
-    return data.groupby('Department').apply(lambda x: x.nlargest(5, 'Salary')).reset_index(drop=True)
-
-# 5. Calculate the percentage of employees in each department who have a performance score above a threshold
-def high_performance_percentage(data, threshold=90):
-    return data.groupby('Department').apply(lambda x: (x['Performance Score'] > threshold).mean() * 100)
-
 # 6. Perform correlation analysis between numerical features
 def correlation_analysis(data):
     return data.corr()
@@ -259,20 +281,13 @@ def correlation_analysis(data):
 # 7. Find the average tenure of employees by department and gender
 def average_tenure_by_dept_and_gender(data):
     return data.groupby(['Department', 'Gender'])['Tenure'].mean().reset_index()
-
-# 8. Detect any anomalies in salary distribution using z-score analysis
-from scipy.stats import zscore
-
-def detect_salary_anomalies(data):
-    data['Salary Z-Score'] = zscore(data['Salary'])
-    return data[data['Salary Z-Score'].abs() > 3]  # Employees with z-score > 3 or < -3
-
 """
 
 # Example Use Cases
 if __name__ == "__main__":
     # Run all analyses
-    report = generate_report_fit(df)
+    # report = generate_report_fit(df)
+    high_performance_percentage(df)
 
 # https://chatgpt.com/c/6758be0f-fdf0-800c-98b6-aebae7632d04 (single-pandas-project: 001)
 # https://chatgpt.com/c/674b65b9-fecc-800c-8311-7f681df9b305 (projects: pandas)

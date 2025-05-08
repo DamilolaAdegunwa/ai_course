@@ -3,15 +3,18 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 from scipy.stats import zscore
 
+
 # Load Data
 def load_data(file_path):
     return pd.read_csv(file_path)
+
 
 # Univariate Anomaly Detection
 def detect_univariate_anomalies(data, column, threshold=3):
     data['z_score'] = zscore(data[column])
     anomalies = data[np.abs(data['z_score']) > threshold]
     return anomalies
+
 
 # Multivariate Anomaly Detection using DBSCAN
 def detect_multivariate_anomalies(data, columns, eps=0.5, min_samples=5):
@@ -21,11 +24,13 @@ def detect_multivariate_anomalies(data, columns, eps=0.5, min_samples=5):
     anomalies = data[data['cluster'] == -1]
     return anomalies
 
+
 # Root Cause Analysis
 def root_cause_analysis(data, anomaly_index, columns):
     correlation_matrix = data[columns].corr()
     root_cause = correlation_matrix.iloc[anomaly_index].sort_values(ascending=False)
     return root_cause
+
 
 # Visualization
 def visualize_anomalies(data, column, anomalies):
@@ -38,6 +43,7 @@ def visualize_anomalies(data, column, anomalies):
     plt.xlabel("Index")
     plt.ylabel(column)
     plt.show()
+
 
 # Example Usage
 if __name__ == "__main__":

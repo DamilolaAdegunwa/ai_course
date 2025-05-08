@@ -4,15 +4,18 @@ from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from statsmodels.tsa.arima.model import ARIMA
 import matplotlib.pyplot as plt
 
+
 # Load and Prepare Data
 def load_data(file_path):
     data = pd.read_csv(file_path, parse_dates=['Date'], index_col='Date')
     return data
 
+
 # Trend Analysis
 def detect_trend(data, column):
     trend = data[column].rolling(window=5, min_periods=1).mean()
     return trend
+
 
 # Forecasting with ARIMA
 def forecast_arima(data, column, steps=5):
@@ -21,12 +24,14 @@ def forecast_arima(data, column, steps=5):
     forecast = model_fit.forecast(steps=steps)
     return forecast
 
+
 # Forecasting with Holt-Winters
 def forecast_holt_winters(data, column, steps=5):
     model = ExponentialSmoothing(data[column], trend='add', seasonal=None, damped_trend=True)
     model_fit = model.fit()
     forecast = model_fit.forecast(steps=steps)
     return forecast
+
 
 # Monte Carlo Simulation for Probability Analysis
 def monte_carlo_simulation(data, column, steps=5, simulations=1000):
@@ -42,6 +47,7 @@ def monte_carlo_simulation(data, column, steps=5, simulations=1000):
     probability_exceed = np.mean(simulated_paths[:, -1] > recent_value + 5)
     return simulated_paths, probability_exceed
 
+
 # Visualization
 def visualize_results(data, trend, forecast, column):
     plt.figure(figsize=(12, 6))
@@ -53,6 +59,7 @@ def visualize_results(data, trend, forecast, column):
     plt.xlabel("Date")
     plt.ylabel(column)
     plt.show()
+
 
 # Main Execution
 if __name__ == "__main__":

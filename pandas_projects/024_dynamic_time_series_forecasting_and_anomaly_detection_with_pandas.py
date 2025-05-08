@@ -1,32 +1,37 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pandas import DataFrame
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
+
 # Function to preprocess time series data
-def preprocess_time_series(df, time_col, value_col, freq='H'):
+def preprocess_time_series(df: DataFrame, time_col, value_col, freq='H'):
     df[time_col] = pd.to_datetime(df[time_col])
     df.set_index(time_col, inplace=True)
     df = df.resample(freq).mean()  # Resampling to specified frequency
     df[value_col] = df[value_col].interpolate()  # Filling missing values
     return df
 
+
 # Function for anomaly detection
-def detect_anomalies(df, value_col, threshold=3):
+def detect_anomalies(df: DataFrame, value_col, threshold=3):
     mean = df[value_col].mean()
     std = df[value_col].std()
     df['Anomaly'] = ((df[value_col] - mean).abs() > threshold * std).astype(int)
     return df
 
+
 # Function for forecasting
-def forecast_time_series(df, value_col, periods, seasonal_periods=12):
+def forecast_time_series(df: DataFrame, value_col, periods, seasonal_periods=12):
     model = ExponentialSmoothing(df[value_col], seasonal='add', seasonal_periods=seasonal_periods).fit()
     forecast = model.forecast(periods)
     return forecast
 
+
 # Function to visualize the time series, anomalies, and forecast
-def visualize_results(df, value_col, forecast=None, title='Time Series Analysis'):
+def visualize_results(df: DataFrame, value_col, forecast=None, title='Time Series Analysis'):
     plt.figure(figsize=(12, 6))
     plt.plot(df[value_col], label='Original Data', color='blue')
     if 'Anomaly' in df.columns:
@@ -38,6 +43,7 @@ def visualize_results(df, value_col, forecast=None, title='Time Series Analysis'
     plt.title(title)
     plt.legend()
     plt.show()
+
 
 # Main function
 if __name__ == "__main__":

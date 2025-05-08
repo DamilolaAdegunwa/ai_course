@@ -15,6 +15,7 @@ os.environ['OPENAI_API_KEY'] = apikey
 OpenAI.api_key = apikey
 client = OpenAI()
 
+
 # Function to generate an image based on a scene description
 def generate_scene_image(scene_description):
     """
@@ -41,6 +42,7 @@ def generate_scene_image(scene_description):
 
     return scene_image
 
+
 # Function to create an interactive story visualization
 def create_story_visualization(story_prompts):
     """
@@ -55,6 +57,7 @@ def create_story_visualization(story_prompts):
         scene_images.append(scene_image)
 
     return scene_images
+
 
 # Function to display the generated scenes in a grid layout
 def display_story_visualizations(scene_images, cols=2):
@@ -76,6 +79,7 @@ def display_story_visualizations(scene_images, cols=2):
         gallery_image.paste(scene.resize((1024, 1024)), (x, y))
 
     return gallery_image
+
 
 # Main function to run the story visualization generator
 def main():
@@ -99,6 +103,7 @@ def main():
     output_name = "story_visualization_gallery.png"
     gallery_page.save(output_name)
     print(f"Story visualization gallery image saved as {output_name}")
+
 
 if __name__ == "__main__":
     main()

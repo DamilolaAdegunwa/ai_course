@@ -1,9 +1,11 @@
 import pandas as pd
 import numpy as np
 
+
 # Load data
 def load_dataset(filepath):
     return pd.read_csv(filepath)
+
 
 # Simulate market interactions
 def simulate_market(agents_df):
@@ -25,6 +27,7 @@ def simulate_market(agents_df):
                 break
     return pd.DataFrame(transactions)
 
+
 # Optimize resource allocation
 def optimize_allocation(regions_df, supply_column, demand_column):
     regions_df['Deficit'] = regions_df[demand_column] - regions_df[supply_column]
@@ -44,6 +47,7 @@ def optimize_allocation(regions_df, supply_column, demand_column):
                 surplus_regions.loc[surplus_region.name, 'Deficit'] += allocation
                 deficit_regions.loc[deficit_region.name, 'Deficit'] -= allocation
     return pd.DataFrame(allocations)
+
 
 # Example usage
 if __name__ == "__main__":

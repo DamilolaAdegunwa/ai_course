@@ -63,6 +63,7 @@ class AdvancedDocumentIndexer:
             return sorted(results, key=lambda x: x.metadata['date'])
         return results
 
+
 if __name__ == "__main__":
     indexer = AdvancedDocumentIndexer()
     indexer.load_documents("documents")

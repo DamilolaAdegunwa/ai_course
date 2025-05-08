@@ -113,4 +113,4 @@ if __name__ == "__main__":
     social_media_data = {"news_headline": "Crypto investments are highly risky and unsustainable, says analyst."}
     print(advisor.user_query("analyze_sentiment", social_media_data))
 
-#https://chatgpt.com/c/6727d267-1b20-800c-93f0-4993b4935e96
+# https://chatgpt.com/c/6727d267-1b20-800c-93f0-4993b4935e96

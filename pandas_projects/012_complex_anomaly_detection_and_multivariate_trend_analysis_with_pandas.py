@@ -5,7 +5,7 @@ import seaborn as sns
 from scipy.stats import zscore
 
 
-# Load and preprocess data
+# 1. Load and preprocess data
 def load_multivariate_data(file_path, date_column):
     df = pd.read_csv(file_path, parse_dates=[date_column])
     df.sort_values(by=date_column, inplace=True)
@@ -13,7 +13,7 @@ def load_multivariate_data(file_path, date_column):
     return df
 
 
-# Detect anomalies using rolling statistics
+# 2. Detect anomalies using rolling statistics
 def detect_anomalies(df, window_size, z_thresh=3):
     anomalies = {}
     for column in df.columns:
@@ -24,14 +24,14 @@ def detect_anomalies(df, window_size, z_thresh=3):
     return anomalies
 
 
-# Multivariate trend analysis
+# 3. Multivariate trend analysis
 def multivariate_trend_analysis(df):
     correlation_matrix = df.corr()
     trend_analysis = df.diff().mean().to_dict()  # Avg changes per time unit
     return correlation_matrix, trend_analysis
 
 
-# Visualize anomalies and correlations
+# 4. Visualize anomalies and correlations
 def visualize_anomalies_and_trends(df, anomalies, correlation_matrix, title):
     plt.figure(figsize=(12, 6))
     for column in df.columns:
@@ -48,7 +48,7 @@ def visualize_anomalies_and_trends(df, anomalies, correlation_matrix, title):
     plt.show()
 
 
-# Full pipeline
+# 5. Full pipeline
 def anomaly_detection_pipeline(file_path, date_column, window_size, z_thresh):
     print("Loading data...")
     df = load_multivariate_data(file_path, date_column)

@@ -1,11 +1,12 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pandas import DataFrame
 from sklearn.ensemble import IsolationForest
 
 
 # Preprocessing Function
-def preprocess_stock_data(df):
+def preprocess_stock_data(df: DataFrame):
     df['Timestamp'] = pd.to_datetime(df['Timestamp'])
     df.set_index('Timestamp', inplace=True)
     df.sort_index(inplace=True)
@@ -13,7 +14,7 @@ def preprocess_stock_data(df):
 
 
 # Feature Engineering
-def calculate_indicators(df):
+def calculate_indicators(df: DataFrame):
     # Simple Moving Averages
     df['SMA_20'] = df['Price'].rolling(window=20).mean()
     df['SMA_50'] = df['Price'].rolling(window=50).mean()
@@ -42,18 +43,17 @@ def calculate_indicators(df):
 
 
 # Anomaly Detection
-def detect_anomalies(df):
+def detect_anomalies(df: DataFrame):
     model = IsolationForest(contamination=0.05, random_state=42)
     df['Anomaly'] = model.fit_predict(df[['Price', 'Volume']])
     return df
 
 
 # Visualization
-def plot_data_with_anomalies(df):
+def plot_data_with_anomalies(df: DataFrame):
     plt.figure(figsize=(12, 6))
     plt.plot(df['Price'], label='Price', color='blue')
-    plt.scatter(df[df['Anomaly'] == -1].index, df[df['Anomaly'] == -1]['Price'], color='red', label='Anomaly',
-                marker='o')
+    plt.scatter(df[df['Anomaly'] == -1].index, df[df['Anomaly'] == -1]['Price'], color='red', label='Anomaly', marker='o')
     plt.title('Stock Prices with Anomalies')
     plt.legend()
     plt.show()

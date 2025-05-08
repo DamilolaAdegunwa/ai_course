@@ -1,9 +1,11 @@
 import re
 from googleapiclient.discovery import build
 
+
 # Initialize YouTube API
 def get_youtube_service(api_key):
     return build('youtube', 'v3', developerKey=api_key)
+
 
 # Fetch the channel ID based on the @handle name
 def get_channel_id(service, channel_name):
@@ -19,6 +21,7 @@ def get_channel_id(service, channel_name):
     else:
         raise ValueError("Channel not found. Please check the channel name.")
 
+
 # Get the latest videos from the channel
 def get_video_titles(service, channel_id):
     video_titles = []
@@ -33,6 +36,7 @@ def get_video_titles(service, channel_id):
         if item['id']['kind'] == "youtube#video":
             video_titles.append(item['snippet']['title'])
     return video_titles
+
 
 # Main function
 def main():
@@ -57,6 +61,7 @@ def main():
             print(title)
     except Exception as e:
         print(f"An error occurred: {e}")
+
 
 # Run the program
 if __name__ == "__main__":

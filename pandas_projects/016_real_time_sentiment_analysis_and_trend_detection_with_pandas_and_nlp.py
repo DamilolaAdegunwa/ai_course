@@ -19,7 +19,7 @@ def sentiment_analysis(text):
 
 
 # Function to extract keywords and detect trends using TF-IDF
-def detect_trends(data, n_features=5):
+def detect_trends(data, n_features=5): # this method is better call "keywords_extractor"
     tfidf = TfidfVectorizer(stop_words='english')
     X = tfidf.fit_transform(data['Tweet'])
     feature_names = np.array(tfidf.get_feature_names_out())

@@ -1,25 +1,26 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from pandas import DataFrame
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 
-# Function to preprocess time-series data
+# 1. Function to preprocess time-series data
 def preprocess_time_series(df, date_col):
     df[date_col] = pd.to_datetime(df[date_col])
     df.set_index(date_col, inplace=True)
     return df
 
 
-# Function for rolling averages and lagged features
+# 2. Function for rolling averages and lagged features
 def create_features(df, target_col, window=3):
     df[f'{target_col}_rolling_avg'] = df[target_col].rolling(window=window).mean()
     df[f'{target_col}_lag_1'] = df[target_col].shift(1)
     return df
 
 
-# Function for seasonal decomposition
+# 3. Function for seasonal decomposition
 def seasonal_analysis(df, target_col, frequency):
     decomposition = seasonal_decompose(df[target_col], model='additive', period=frequency)
     decomposition.plot()
@@ -27,7 +28,7 @@ def seasonal_analysis(df, target_col, frequency):
     return decomposition
 
 
-# Function for forecasting with Exponential Smoothing
+# 4. Function for forecasting with Exponential Smoothing
 def forecast_exponential_smoothing(df, target_col, forecast_steps):
     model = ExponentialSmoothing(df[target_col], seasonal='additive', seasonal_periods=12)
     fit = model.fit()
@@ -35,8 +36,8 @@ def forecast_exponential_smoothing(df, target_col, forecast_steps):
     return forecast
 
 
-# Function for visualization
-def plot_time_series(df, columns, title):
+# 5. Function for visualization
+def plot_time_series(df: DataFrame, columns, title: str):
     plt.figure(figsize=(12, 6))
     for col in columns:
         plt.plot(df.index, df[col], label=col)

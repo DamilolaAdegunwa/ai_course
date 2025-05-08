@@ -5,16 +5,19 @@ from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.arima.model import ARIMA
 from scipy.stats import zscore
 
+
 # Load Time Series Data
 def load_data(file_path):
     data = pd.read_csv(file_path, parse_dates=['Date'], index_col='Date')
     return data
+
 
 # Detect Anomalies Using Z-Score
 def detect_anomalies(data, column, threshold=3):
     data['Z-Score'] = zscore(data[column])
     data['Anomaly'] = data['Z-Score'].apply(lambda x: abs(x) > threshold)
     return data
+
 
 # Seasonal and Trend Decomposition
 def decompose_time_series(data, column, freq):
@@ -23,12 +26,14 @@ def decompose_time_series(data, column, freq):
     plt.show()
     return decomposition
 
+
 # Forecast Using ARIMA
 def forecast_time_series(data, column, steps=5):
     model = ARIMA(data[column], order=(1, 1, 1))  # Adjust order for better results
     model_fit = model.fit()
     forecast = model_fit.forecast(steps=steps)
     return forecast
+
 
 # Visualization
 def plot_results(data, column, forecast=None):
@@ -41,6 +46,7 @@ def plot_results(data, column, forecast=None):
     plt.scatter(anomalies.index, anomalies[column], color='red', label="Anomalies")
     plt.legend()
     plt.show()
+
 
 # Main Execution
 if __name__ == "__main__":

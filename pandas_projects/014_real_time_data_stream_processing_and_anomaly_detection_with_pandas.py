@@ -6,14 +6,14 @@ import random
 import time
 
 
-# Function to simulate a data stream
+# 1. Function to simulate a data stream
 def simulate_data_stream(start_time, num_points, interval_seconds=60):
     timestamps = [start_time + timedelta(seconds=i * interval_seconds) for i in range(num_points)]
     metrics = [random.randint(20, 30) for _ in range(num_points)]
     return pd.DataFrame({'Timestamp': timestamps, 'Metric': metrics})
 
 
-# Sliding window aggregation and anomaly detection
+# 2. Sliding window aggregation and anomaly detection
 class RealTimeProcessor:
     def __init__(self, window_size=5, z_threshold=2.0):
         self.window_size = window_size

@@ -3,8 +3,11 @@ from sklearn.preprocessing import MinMaxScaler, LabelEncoder
 import numpy as np
 
 # Load the Titanic dataset
-file_path = "titanic.csv"
-df = pd.read_csv(file_path)
+# file_path = "titanic.csv"
+# df = pd.read_csv(file_path)
+
+file_path = "titanic.xlsx"
+df = pd.read_excel(file_path)
 
 
 # Data Preprocessing
@@ -12,9 +15,13 @@ def preprocess_titanic_data(df):
     # Fill missing values with median for numerical columns and mode for categorical
     for column in df.columns:
         if df[column].dtype in ['int64', 'float64']:
-            df[column].fillna(df[column].median(), inplace=True)
+            # df[column].fillna(df[column].median(), inplace=True)  # old!
+            df.fillna({column: df[column].median()}, inplace=True)
+            # or df[column] = df[column].fillna(df[column].median())
         else:
-            df[column].fillna(df[column].mode()[0], inplace=True)
+            # df[column].fillna(df[column].mode()[0], inplace=True) # old
+            df.fillna({column: df[column].mode()[0]}, inplace=True)
+            # or df[column] = df[column].fillna(df[column].mode()[0])
     return df
 
 
@@ -58,13 +65,15 @@ def select_features_by_correlation(df, target_column, threshold=0.1):
 if __name__ == "__main__":
     print("Scaling and Encoding Features...")
     df_scaled, encoders = scale_and_encode_features(df)
+    print(f"df_scaled:\n {df_scaled}")
 
     print("Generating Lag Features...")
     lagged_df = generate_lag_features(df_scaled, columns=['Age', 'Fare'], lags=3)
+    print(f"lagged_df:\n {lagged_df}")
 
     print("Selecting Features by Correlation...")
     selected_features = select_features_by_correlation(lagged_df, target_column='Survived')
-    print("Selected Features:", selected_features)
+    print("Selected Features:\n ", selected_features)
 
 
 comment = """

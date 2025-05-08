@@ -1,6 +1,8 @@
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
+from networkx import Graph
+from pandas import DataFrame
 
 # Load Titanic Dataset
 file_path = "titanic.csv"
@@ -8,8 +10,8 @@ df = pd.read_csv(file_path)
 
 
 # Example Function 1: Create Passenger Network Based on Shared Cabin
-def create_cabin_network(df):
-    cabin_network = nx.Graph()
+def create_cabin_network(df: DataFrame) -> Graph:
+    cabin_network: Graph = nx.Graph()
     for _, group in df.groupby("Cabin"):
         passengers = group["Name"].tolist()
         for i in range(len(passengers)):
@@ -19,10 +21,9 @@ def create_cabin_network(df):
 
 
 # Example Function 2: Calculate Centrality Metrics
-def calculate_centrality_metrics(graph):
+def calculate_centrality_metrics(graph) -> DataFrame:
     centrality = nx.degree_centrality(graph)
-    return pd.DataFrame(centrality.items(), columns=["Passenger", "Centrality"]).sort_values(by="Centrality",
-                                                                                             ascending=False)
+    return pd.DataFrame(centrality.items(), columns=["Passenger", "Centrality"]).sort_values(by="Centrality", ascending=False)
 
 
 # Example Function 3: Shortest Path Analysis

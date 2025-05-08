@@ -5,14 +5,17 @@ import seaborn as sns
 
 # Load the Air Quality dataset as an example
 # file_path = "air_quality_no2.csv"
-file_path = "air_quality_long_edited.csv"
-df = pd.read_csv(file_path, parse_dates=['datetime'])
+# file_path = "air_quality_long_edited.csv"
+# df = pd.read_csv(file_path, parse_dates=['datetime'])
+
+file_path = "air_quality_long_edited.xlsx"
+df = pd.read_excel(file_path, parse_dates=['datetime'])
 
 # Ensure datetime is correctly parsed and set as index
 df['datetime'] = pd.to_datetime(df['datetime'])
 df = df.set_index('datetime')
 
-# remove reduntant lines
+# remove redundant columns
 df = df.drop(['city', 'country', 'location', 'unit'], axis=1)
 
 # Print unique values in the 'parameter' column
@@ -38,16 +41,17 @@ df = preprocess_air_quality_data(df)
 
 
 # Example Function 1: Seasonal Trend Analysis
-def analyze_monthly_trends(df, pollutant=2):
+def analyze_monthly_trends(df):
     monthly_avg = df.resample('ME').mean()  # Resample to monthly averages
     print("monthly_avg")
     print(monthly_avg)
 
     plt.figure(figsize=(10, 6))
-    plt.plot(monthly_avg.index, monthly_avg["parameter"], marker='o', linestyle='-', label=f'{pollutant} Levels')
-    plt.title('Monthly NO2 Trends')
+    # plt.plot(monthly_avg.index, monthly_avg["parameter"], marker='o', linestyle='-', label=f'{pollutant} Levels')
+    plt.plot(monthly_avg.index, monthly_avg, marker='o', linestyle='-', label=f'Levels')
+    plt.title('Monthly Trends')
     plt.xlabel('Month')
-    plt.ylabel(f'{pollutant} Levels')
+    plt.ylabel(f'Levels')
     plt.grid(True)
     plt.legend()
     plt.show()
@@ -79,22 +83,21 @@ def detect_anomalies(df, pollutant=2, threshold=1.5):
 # Example Function 3: Correlation Between Pollutants
 def pollutant_correlation(df):
     # print(df)
-    # correlation_matrix = df["parameter"].corr(df['month'])
-    grouped = df.groupby('parameter').mean()  # Compute mean for each parameter
-    correlation = grouped['value'].corr(grouped['month'])
+    correlation_matrix = df["parameter"].corr(df['month'])
+    # grouped = df.groupby('parameter').mean()  # Compute mean for each parameter
+    # correlation: int = grouped['value'].corr(grouped['month'])
 
-    print("correlation")
-    print(correlation)
+    print("correlation_matrix")
+    print(correlation_matrix)
 
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(correlation, annot=True, cmap='coolwarm')
-    plt.title('Pollutant Correlation Heatmap')
-    plt.show()
+    # plt.figure(figsize=(8, 6))
+    # sns.heatmap(correlation, annot=True, cmap='coolwarm')
+    # plt.title('Pollutant Correlation Heatmap')
+    # plt.show()
     return correlation_matrix
 
 
-# Test the pipeline
-if __name__ == "__main__":
+def generate_report():
     print("Analyzing Monthly Trends...")
     monthly_trends = analyze_monthly_trends(df)
 
@@ -104,6 +107,12 @@ if __name__ == "__main__":
     print("Pollutant Correlation Analysis...")
     correlation_matrix = pollutant_correlation(df)
 
+    return
+
+
+# Test the pipeline
+if __name__ == "__main__":
+    generate_report()
 
 # https://chatgpt.com/c/674b65b9-fecc-800c-8311-7f681df9b305 (all pandas projects)
 # https://chatgpt.com/c/676810bf-2c48-800c-96ec-18a9647de1bb (pandas project 5)

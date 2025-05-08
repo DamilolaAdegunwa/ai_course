@@ -1,4 +1,5 @@
 import pandas as pd
+from pandas import DataFrame, Series
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
@@ -8,7 +9,7 @@ from sklearn.compose import ColumnTransformer
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+from sklearn.impute import SimpleImputer
 # Load the dataset
 file_path = "expanded_employee_dataset.xlsx"
 df = pd.read_excel(file_path)
@@ -16,7 +17,7 @@ df['Join_Year'] = df['Join_Date'].dt.year
 
 
 # 0. Feature Engineering
-def preprocess_data(df):
+def preprocess_data(df: DataFrame) -> (Series | None | DataFrame, Series | None | DataFrame):
     # df['Join_Year'] = df['Join_Date'].dt.year
     feature_columns = ['Age', 'Salary', 'Department']
     target_column = 'Performance_Score'
@@ -24,6 +25,7 @@ def preprocess_data(df):
     # One-hot encode categorical data
     X = df[feature_columns]
     y = df[target_column]
+    # a :Series | None | DataFrame = None  # (Series | None | DataFrame, Series | None | DataFrame)
     return X, y
 
 
@@ -64,11 +66,12 @@ def predict_performance(df):
     print("Predictions on Test Data:")
     print(results.head())
 
-    return pipeline
+    # return pipeline
+    return results, X_test, y_test, pipeline
 
 
 # 2. Forecasting Hiring Trends
-def forecast_hiring_trends(df):
+def forecast_hiring_trends(df: DataFrame):
     hiring_data = df['Join_Year'].value_counts().sort_index()
     X = np.array(hiring_data.index).reshape(-1, 1)
     y = hiring_data.values
@@ -101,13 +104,31 @@ def forecast_hiring_trends(df):
 # 3. Identify High-Performing Departments
 def high_performance_departments(df):
     avg_performance = df.groupby('Department')['Performance_Score'].mean()
+    print(avg_performance)
     return avg_performance.sort_values(ascending=False)
 
 
-# 4. Analyze Salary Distribution
-def analyze_salary_distribution(df):
+# 4a. Analyze Salary Distribution
+def analyze_salary_distribution_old(df):
     salary_stats = df['Salary'].describe()
+    print(salary_stats)
     return salary_stats
+
+
+# 4b. Analyze Salary Distribution
+def analyze_salary_distribution(df):
+    # by department
+    avg_performance_department: DataFrame = df.groupby('Department')['Salary'].mean().sort_values(ascending=False)
+    print(avg_performance_department)
+
+    # by Join_Year
+    avg_performance_join_year: DataFrame = df.groupby('Join_Year')['Salary'].mean().sort_values(ascending=False)
+    print(avg_performance_join_year)
+
+    # by Age
+    avg_performance_age: DataFrame = df.groupby('Age')['Salary'].mean().sort_values(ascending=False)
+    print(avg_performance_age)
+    return avg_performance_department, avg_performance_join_year, avg_performance_age
 
 
 # 5. Predict Salary Based on Features
@@ -124,6 +145,19 @@ def predict_salary(df):
     categorical_transformer = OneHotEncoder(handle_unknown='ignore')
     numeric_transformer = StandardScaler()
 
+    commented_transformer = """
+    # you could opt for a more compound option
+    numeric_transformer = Pipeline(steps=[
+        ('imputer', SimpleImputer(strategy='median')),
+        ('scaler', StandardScaler())
+    ])
+
+    categorical_transformer = Pipeline(steps=[
+        ('imputer', SimpleImputer(strategy='constant', fill_value='missing')),
+        ('onehot', OneHotEncoder(handle_unknown='ignore'))
+    ])
+    """
+
     preprocessor = ColumnTransformer(
         transformers=[
             ('num', numeric_transformer, numeric_features),
@@ -139,8 +173,8 @@ def predict_salary(df):
 
     predictions = pipeline.predict(X_test)
     results = pd.DataFrame({'Actual': y_test, 'Predicted': predictions})
-
-    return results
+    print(results)
+    return results, X_test, y_test, pipeline
 
 
 # 6. Forecast Average Performance Score per Year
@@ -156,29 +190,32 @@ def forecast_performance_trends(df):
     forecast = model.predict(future_years)
 
     forecast_df = pd.DataFrame({'Year': future_years.flatten(), 'Predicted_Performance': forecast})
-
+    print(forecast_df)
     return forecast_df
 
 
 # 7. Correlation Analysis
-def correlation_analysis(df):
-    correlation_matrix = df.corr()
-    return correlation_matrix
+def correlation_analysis(df: DataFrame):
+    data = df[['Age', 'Performance_Score', 'Salary', 'Join_Year']]
+    mean_vals = np.mean(data, axis=0); std_vals = np.std(data, axis=0)
+    standardized_data = (data - mean_vals) / std_vals
+    t_corrcoef = np.corrcoef(standardized_data.T)
+    print(t_corrcoef)
+    return t_corrcoef
 
 
 # 8. Evaluate Model Performance
-def evaluate_model_performance(df):
-    performance_metrics = {
-        'Model': ['RandomForestRegressor', 'LinearRegression'],
-        'Accuracy': [0.85, 0.78]  # Placeholder values
-    }
-    return pd.DataFrame(performance_metrics)
+def evaluate_model_performance(X_test, y_test, pipeline):
+    predictions = pipeline.predict(X_test)
+    results = pd.DataFrame({'Actual': y_test, 'Predicted': predictions})
+
+    return results
 
 
-# 9. Analyze Turnover Trends
-def turnover_trends(df):
-    turnover_data = df['Turnover'].value_counts()
-    return turnover_data
+# 9. Evaluate Total Salary Paid by the Company
+def total_salary_paid_by_the_company(df):
+    salary_sum = df['Salary'].sum()
+    return salary_sum
 
 
 # 10. Performance Clusters
@@ -188,13 +225,13 @@ def performance_clusters(df):
     X = df[['Performance_Score']]
     kmeans = KMeans(n_clusters=3, random_state=42)
     df['Performance_Cluster'] = kmeans.fit_predict(X)
-    return df[['Employee_ID', 'Performance_Cluster']]
+    return df[['Name', 'Performance_Cluster']]
 
 
 # Generate Report
 def generate_report(df):
     print("Predict Employee Performance")
-    performance_predictions = predict_performance(df)
+    performance_predictions, X_test, y_test, pipeline = predict_performance(df)
 
     print("Forecast Hiring Trends")
     hiring_trends = forecast_hiring_trends(df)
@@ -215,10 +252,10 @@ def generate_report(df):
     correlation_analysis_result = correlation_analysis(df)
 
     print("Evaluate Model Performance")
-    model_performance = evaluate_model_performance(df)
+    model_performance = evaluate_model_performance(X_test, y_test, pipeline)
 
-    print("Analyze Turnover Trends")
-    turnover_trends_result = turnover_trends(df)
+    print("total_salary_paid_by_the_company")
+    total_salary_paid_by_the_company_ = total_salary_paid_by_the_company(df)
 
     print("Identify Performance Clusters")
     performance_clusters_result = performance_clusters(df)
@@ -233,7 +270,7 @@ def generate_report(df):
         'Performance Trends': performance_trends,
         'Correlation Analysis': correlation_analysis_result,
         'Model Performance': model_performance,
-        'Turnover Trends': turnover_trends_result,
+        'Total Salary Paid By the Company': total_salary_paid_by_the_company_,
         'Performance Clusters': performance_clusters_result
     }
 
@@ -241,9 +278,27 @@ def generate_report(df):
     return report
 
 
+# test this (rough work)
+def test1(df):
+    hiring_data = df['Join_Year'].value_counts().sort_index()
+    X = np.array(hiring_data.index).reshape(-1, 1)
+    print(f"hiring_data.index {hiring_data.index}")
+    y = hiring_data.values
+    print(f"y {y}")
+
+
 # Main
 if __name__ == "__main__":
-    output = generate_report(df)
+    # test1(df)
+    # predict_performance(df)  # 1
+    # forecast_hiring_trends(df)  # 2
+    # high_performance_departments(df)  # 3
+    # analyze_salary_distribution_old(df)  # 4a
+    # analyze_salary_distribution(df)  # 4b
+    # predict_salary(df)  # 5
+    # forecast_performance_trends(df)  # 6
+    correlation_analysis(df)  # 7
+    # output = generate_report(df)
 '''    for key, value in report.items():
         print(f"\n{key}:\n{value}\n")'''
 

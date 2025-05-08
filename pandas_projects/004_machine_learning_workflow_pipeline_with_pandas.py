@@ -10,8 +10,11 @@ from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.linear_model import LogisticRegression
 
 # Load the dataset (use Titanic as an example)
-file_path = "titanic.csv"
-df = pd.read_csv(file_path)
+# file_path = "titanic.csv"
+# df = pd.read_csv(file_path)
+
+file_path = "titanic.xlsx"
+df = pd.read_excel(file_path)
 
 
 # Feature Engineering

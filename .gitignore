@@ -218,3 +218,13 @@
 /ml_projects/.ipynb_checkpoints
 /ml_projects/elliptic_bitcoin_dataset
 /ml_projects/old_elliptic_bitcoin_dataset
+.qodo
+/product_recommendation_system_projects/data/processed/data_all-MiniLM-L6-v2.pt
+/product_recommendation_system_projects/data/processed/pre_filter.pt
+/product_recommendation_system_projects/data/processed/pre_transform.pt
+/product_recommendation_system_projects/data/raw/ml-latest-small/links.csv
+/product_recommendation_system_projects/data/raw/ml-latest-small/movies.csv
+/product_recommendation_system_projects/data/raw/ml-latest-small/ratings.csv
+/product_recommendation_system_projects/data/raw/ml-latest-small/README.txt
+/product_recommendation_system_projects/data/raw/ml-latest-small/tags.csv
+/index.html
